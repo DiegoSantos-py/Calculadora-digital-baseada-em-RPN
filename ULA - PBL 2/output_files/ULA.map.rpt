@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ULA
-Wed Oct 08 23:43:22 2025
+Thu Oct 09 00:04:19 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 08 23:43:22 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 09 00:04:19 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; ULA                                         ;
 ; Top-level Entity Name              ; divisor8bit                                 ;
@@ -180,15 +180,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                               ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
-; mux.v                            ; yes             ; User Verilog HDL File  ; D:/ULA - PBL 2/mux.v         ;         ;
-; sub8bit.v                        ; yes             ; User Verilog HDL File  ; D:/ULA - PBL 2/sub8bit.v     ;         ;
-; divisor8bit.v                    ; yes             ; User Verilog HDL File  ; D:/ULA - PBL 2/divisor8bit.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path         ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------+---------+
+; mux.v                            ; yes             ; User Verilog HDL File  ; D:/rep_ula/ULA - PBL 2/mux.v         ;         ;
+; sub8bit.v                        ; yes             ; User Verilog HDL File  ; D:/rep_ula/ULA - PBL 2/sub8bit.v     ;         ;
+; divisor8bit.v                    ; yes             ; User Verilog HDL File  ; D:/rep_ula/ULA - PBL 2/divisor8bit.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -512,62 +512,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 08 23:43:06 2025
+    Info: Processing started: Thu Oct 09 00:04:04 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ULA -c ULA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file jkflipflop.v
-    Info (12023): Found entity 1: jkflipflop File: D:/ULA - PBL 2/jkflipflop.v Line: 1
-Warning (12090): Entity "mux" obtained from "mux.v" instead of from Quartus Prime megafunction library File: D:/ULA - PBL 2/mux.v Line: 54
+    Info (12023): Found entity 1: jkflipflop File: D:/rep_ula/ULA - PBL 2/jkflipflop.v Line: 1
+Warning (12090): Entity "mux" obtained from "mux.v" instead of from Quartus Prime megafunction library File: D:/rep_ula/ULA - PBL 2/mux.v Line: 54
 Info (12021): Found 3 design units, including 3 entities, in source file mux.v
-    Info (12023): Found entity 1: mux1 File: D:/ULA - PBL 2/mux.v Line: 1
-    Info (12023): Found entity 2: mux8bit File: D:/ULA - PBL 2/mux.v Line: 13
-    Info (12023): Found entity 3: mux File: D:/ULA - PBL 2/mux.v Line: 54
+    Info (12023): Found entity 1: mux1 File: D:/rep_ula/ULA - PBL 2/mux.v Line: 1
+    Info (12023): Found entity 2: mux8bit File: D:/rep_ula/ULA - PBL 2/mux.v Line: 13
+    Info (12023): Found entity 3: mux File: D:/rep_ula/ULA - PBL 2/mux.v Line: 54
 Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
-    Info (12023): Found entity 1: d_flipflop File: D:/ULA - PBL 2/d_flipflop.v Line: 1
+    Info (12023): Found entity 1: d_flipflop File: D:/rep_ula/ULA - PBL 2/d_flipflop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shift_register.v
-    Info (12023): Found entity 1: shift_register File: D:/ULA - PBL 2/shift_register.v Line: 1
+    Info (12023): Found entity 1: shift_register File: D:/rep_ula/ULA - PBL 2/shift_register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register_8bit.v
-    Info (12023): Found entity 1: register_8bit File: D:/ULA - PBL 2/register_8bit.v Line: 1
+    Info (12023): Found entity 1: register_8bit File: D:/rep_ula/ULA - PBL 2/register_8bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file contador_mod8.v
-    Info (12023): Found entity 1: contador_mod8 File: D:/ULA - PBL 2/contador_mod8.v Line: 1
+    Info (12023): Found entity 1: contador_mod8 File: D:/rep_ula/ULA - PBL 2/contador_mod8.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file contador_mod4.v
-    Info (12023): Found entity 1: contador_mod4 File: D:/ULA - PBL 2/contador_mod4.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux_shiftregister.v
-    Info (12023): Found entity 1: mux_shiftregister File: D:/ULA - PBL 2/mux_shiftregister.v Line: 1
+    Info (12023): Found entity 1: contador_mod4 File: D:/rep_ula/ULA - PBL 2/contador_mod4.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file switch_debouncer.v
-    Info (12023): Found entity 1: switch_debouncer File: D:/ULA - PBL 2/switch_debouncer.v Line: 1
+    Info (12023): Found entity 1: switch_debouncer File: D:/rep_ula/ULA - PBL 2/switch_debouncer.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file display_hexa.v
-    Info (12023): Found entity 1: display_unidade_hexa File: D:/ULA - PBL 2/display_hexa.v Line: 1
-    Info (12023): Found entity 2: display_dezena_hexa File: D:/ULA - PBL 2/display_hexa.v Line: 67
-Warning (10275): Verilog HDL Module Instantiation warning at top.v(26): ignored dangling comma in List of Port Connections File: D:/ULA - PBL 2/top.v Line: 26
+    Info (12023): Found entity 1: display_unidade_hexa File: D:/rep_ula/ULA - PBL 2/display_hexa.v Line: 1
+    Info (12023): Found entity 2: display_dezena_hexa File: D:/rep_ula/ULA - PBL 2/display_hexa.v Line: 67
+Warning (10275): Verilog HDL Module Instantiation warning at top.v(26): ignored dangling comma in List of Port Connections File: D:/rep_ula/ULA - PBL 2/top.v Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
-    Info (12023): Found entity 1: top File: D:/ULA - PBL 2/top.v Line: 1
+    Info (12023): Found entity 1: top File: D:/rep_ula/ULA - PBL 2/top.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file sum8bit.v
-    Info (12023): Found entity 1: sum File: D:/ULA - PBL 2/sum8bit.v Line: 1
-    Info (12023): Found entity 2: sum8bit File: D:/ULA - PBL 2/sum8bit.v Line: 14
+    Info (12023): Found entity 1: sum File: D:/rep_ula/ULA - PBL 2/sum8bit.v Line: 1
+    Info (12023): Found entity 2: sum8bit File: D:/rep_ula/ULA - PBL 2/sum8bit.v Line: 14
 Info (12021): Found 2 design units, including 2 entities, in source file sub8bit.v
-    Info (12023): Found entity 1: sub File: D:/ULA - PBL 2/sub8bit.v Line: 1
-    Info (12023): Found entity 2: sub8bit File: D:/ULA - PBL 2/sub8bit.v Line: 15
+    Info (12023): Found entity 1: sub File: D:/rep_ula/ULA - PBL 2/sub8bit.v Line: 1
+    Info (12023): Found entity 2: sub8bit File: D:/rep_ula/ULA - PBL 2/sub8bit.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_or.v
-    Info (12023): Found entity 1: OR_operation File: D:/ULA - PBL 2/circuito_or.v Line: 1
+    Info (12023): Found entity 1: OR_operation File: D:/rep_ula/ULA - PBL 2/circuito_or.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_xor.v
-    Info (12023): Found entity 1: XOR_operation File: D:/ULA - PBL 2/circuito_xor.v Line: 1
+    Info (12023): Found entity 1: XOR_operation File: D:/rep_ula/ULA - PBL 2/circuito_xor.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_not.v
-    Info (12023): Found entity 1: NOT_operation File: D:/ULA - PBL 2/circuito_not.v Line: 1
+    Info (12023): Found entity 1: NOT_operation File: D:/rep_ula/ULA - PBL 2/circuito_not.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file circuito_and.v
-    Info (12023): Found entity 1: AND_operation File: D:/ULA - PBL 2/circuito_and.v Line: 1
+    Info (12023): Found entity 1: AND_operation File: D:/rep_ula/ULA - PBL 2/circuito_and.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file divisor8bit.v
-    Info (12023): Found entity 1: mux_divisor File: D:/ULA - PBL 2/divisor8bit.v Line: 1
-    Info (12023): Found entity 2: divisor8bit File: D:/ULA - PBL 2/divisor8bit.v Line: 17
-Warning (10236): Verilog HDL Implicit Net warning at mux_shiftregister.v(7): created implicit net for "nsel" File: D:/ULA - PBL 2/mux_shiftregister.v Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at mux_shiftregister.v(8): created implicit net for "nsel0" File: D:/ULA - PBL 2/mux_shiftregister.v Line: 8
-Warning (10236): Verilog HDL Implicit Net warning at divisor8bit.v(55): created implicit net for "prev7" File: D:/ULA - PBL 2/divisor8bit.v Line: 55
+    Info (12023): Found entity 1: mux_divisor File: D:/rep_ula/ULA - PBL 2/divisor8bit.v Line: 1
+    Info (12023): Found entity 2: divisor8bit File: D:/rep_ula/ULA - PBL 2/divisor8bit.v Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at divisor8bit.v(55): created implicit net for "prev7" File: D:/rep_ula/ULA - PBL 2/divisor8bit.v Line: 55
 Info (12127): Elaborating entity "divisor8bit" for the top level hierarchy
-Info (12128): Elaborating entity "sub8bit" for hierarchy "sub8bit:sub0" File: D:/ULA - PBL 2/divisor8bit.v Line: 26
-Info (12128): Elaborating entity "sub" for hierarchy "sub8bit:sub0|sub:sub1" File: D:/ULA - PBL 2/sub8bit.v Line: 23
-Info (12128): Elaborating entity "mux_divisor" for hierarchy "mux_divisor:mux0" File: D:/ULA - PBL 2/divisor8bit.v Line: 27
-Info (12128): Elaborating entity "mux1" for hierarchy "mux_divisor:mux0|mux1:mux01" File: D:/ULA - PBL 2/divisor8bit.v Line: 7
+Info (12128): Elaborating entity "sub8bit" for hierarchy "sub8bit:sub0" File: D:/rep_ula/ULA - PBL 2/divisor8bit.v Line: 26
+Info (12128): Elaborating entity "sub" for hierarchy "sub8bit:sub0|sub:sub1" File: D:/rep_ula/ULA - PBL 2/sub8bit.v Line: 23
+Info (12128): Elaborating entity "mux_divisor" for hierarchy "mux_divisor:mux0" File: D:/rep_ula/ULA - PBL 2/divisor8bit.v Line: 27
+Info (12128): Elaborating entity "mux1" for hierarchy "mux_divisor:mux0|mux1:mux01" File: D:/rep_ula/ULA - PBL 2/divisor8bit.v Line: 7
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -576,10 +572,10 @@ Info (21057): Implemented 114 device resources after synthesis - the final resou
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 90 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4741 megabytes
-    Info: Processing ended: Wed Oct 08 23:43:22 2025
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:36
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4749 megabytes
+    Info: Processing ended: Thu Oct 09 00:04:19 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:31
 
 
