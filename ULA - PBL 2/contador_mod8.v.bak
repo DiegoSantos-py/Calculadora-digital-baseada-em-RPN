@@ -1,0 +1,20 @@
+module contador_mod8(en, reset, out);
+    input en;
+    input reset;
+    output [3:0] out;
+    
+    // Fios para as entradas D dos flip-flops (os ~out)
+    wire not_out0, not_out1, not_out2, not_out3;
+    
+    // Portas NOT para cada bit
+    not not0(not_out0, out[0]);
+    not not1(not_out1, out[1]);
+    not not2(not_out2, out[2]);
+    not not3(not_out3, out[3]);
+    
+    // Conexão direta entre estágios com portas NOT explícitas
+    d_flipflop dff0 (.q(out[0]), .d(not_out0), .reset(reset), .clk(en));
+    d_flipflop dff1 (.q(out[1]), .d(not_out1), .reset(reset), .clk(out[0]));
+    d_flipflop dff2 (.q(out[2]), .d(not_out2), .reset(reset), .clk(out[1]));
+    d_flipflop dff3 (.q(out[3]), .d(not_out3), .reset(reset), .clk(out[2]));
+endmodule

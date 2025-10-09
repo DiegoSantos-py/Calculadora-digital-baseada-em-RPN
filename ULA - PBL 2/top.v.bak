@@ -1,0 +1,24 @@
+module top(
+    input clk_50MHz,     // clock interno da placa
+    input switch_in,     // switch físico
+    output [7:0] out1, out2, out3,
+    output execute
+);
+
+    wire pulse_en;
+
+    // Debouncer sincronizado com clk_50MHz
+    switch_debouncer_enxuto deb(.clk(clk_50MHz), .switch_raw(switch_in), .pulse(pulse_en));
+
+    // Shift register usando pulse como enable
+    shift_register sr(
+        .in(data_in),
+        .en(pulse_en),
+        .out1(out1),
+        .out2(out2),
+        .out3(out3),
+        .execute(execute),
+        .counter(counter)
+    );
+
+endmodule

@@ -1,0 +1,44 @@
+module mux1(out, in0, in1, sel);
+    input in0, in1, sel;
+    output out;
+    
+    wire w1, w2, w3;
+    
+    not (w3, sel);
+    and (w1, in0, w3);
+    and (w2, in1, sel);
+    or  (out, w1, w2);
+endmodule
+
+module mux(
+	input [7:0]in,
+	input [2:0]sel,
+	output out
+	);
+	
+	wire w0, w1, w2, w3, w4, w5, w6, w7;
+	wire [2:0]nsel;
+	
+	not notsel0(nsel[0], sel[0]);
+	not notsel1(nsel[1], sel[1]);
+	not notsel2(nsel[2], sel[2]);
+	
+	and and00(w0, nsel[0], nsel[1], nsel[2], in[0]);
+	
+	and and01(w1, sel[0], nsel[1], nsel[2], in[1]);
+	
+	and and02(w2, nsel[0], sel[1], nsel[2], in[2]);
+	
+	and and03(w3, sel[0], sel[1], nsel[2], in[3]);
+	
+	and and04(w4, nsel[0], nsel[1], sel[2], in[4]);
+	
+	and and05(w5, sel[0], nsel[1], sel[2], in[5]);
+	
+	and and06(w6, sel[0], sel[1], nsel[2], in[6]);
+	
+	and and07(w7, sel[0], sel[1], sel[2], in[7]);
+	
+endmodule
+	
+	

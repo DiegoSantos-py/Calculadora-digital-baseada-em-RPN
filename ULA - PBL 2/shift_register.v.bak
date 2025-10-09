@@ -1,0 +1,35 @@
+//module shiftregister(in, en, out);
+	//input [7:0]in;
+	//input en; // Enable - Vai carregar o valor nos flipflops
+	//output [7:0]out;
+	
+	//wire [7:0] f1, f2;
+	
+	//register_8bit reg1(in, en, f1);
+//endmodule
+
+module edge_detector_struct(
+    output rising_edge,
+    output falling_edge,
+    input signal,
+    input clk,
+    input reset
+);
+    
+    wire signal_sync, signal_prev;
+    wire not_signal_sync, not_signal_prev;
+    
+    // Flip-flops para sincronização
+    d_flipflop ff1(.q(signal_sync), .d(signal), .clk(clk), .reset(reset));
+    d_flipflop ff2(.q(signal_prev), .d(signal_sync), .clk(clk), .reset(reset));
+    
+    // Portas NOT
+	 not not0(not_signal_sync, signal_sync);
+	 not not1(not_signal_prev, signal_prev);
+    
+    // Detecção de borda
+	 and and0(rising_edge, signal_sync, not_signal_prev);
+	 and and1(falling_edge, signal_prev, not_signal_sync);
+ 
+    
+endmodule
