@@ -19,9 +19,9 @@ module display_hex(b0, b1, b2, b3, a, b, c, d, e, f, g);
 
     // --- Segmento B ---
     and (w[4], nb3, b2, nb1, b0);
-    and (w[5], b3, b2, nb0);
+    and (w[5], b2, b1, nb0);
     and (w[6], b3, b1, b0);
-    and (w[7], b2, b1, nb0);
+    and (w[7], b3, b2, nb0);
     or  (b, w[4], w[5], w[6], w[7]);
 
     // --- Segmento C ---
@@ -40,30 +40,40 @@ module display_hex(b0, b1, b2, b3, a, b, c, d, e, f, g);
     // --- Segmento E ---
     and (w[15], nb3, b0);
     and (w[16], nb2, nb1, b0);
-    and (w[17], b3, nb2, nb1);
+    and (w[17], nb3, b2, nb1);
     or  (e, w[15], w[16], w[17]);
 
     // --- Segmento F ---
-    and (w[18], nb3, nb1, b0);
+    and (w[18], nb3, nb2, b0);
     and (w[19], nb3, nb2, b1);
-    and (w[20], b3, b2, nb0);
-    and (w[21], b3, b1, nb0);
+    and (w[20], nb3, b1, b0);
+    and (w[21], b3, b2, nb1, b0);
     or  (f, w[18], w[19], w[20], w[21]);
 
     // --- Segmento G ---
     and (w[22], nb3, nb2, nb1);
-    and (w[23], b3, b2, b1);
-    and (w[24], b3, b2, nb0);
+    and (w[23], nb3, b2, b1, b0);
+    and (w[24], b3, b2, nb1, nb0);
     or  (g, w[22], w[23], w[24]);
 endmodule
 
-module display_hexa(A0, A1, A2, A3, Ua, Ub, Uc, Ud, Ue, Uf, Ug, B0, B1, B2, B3, Da, Db, Dc, Dd, De, Df, Dg);
-	input A0, A1, A2, A3, B0, B1, B2, B3;
-	output Ua, Ub, Uc, Ud, Ue, Uf, Ug, Da, Db, Dc, Dd, De, Df, Dg;
+module display_hexa(
+    input A0, A1, A2, A3, 
+    input B0, B1, B2, B3,
+    output [6:0] d1, d2
+);
 
+    display_hex unidade(
+        A0, A1, A2, A3,
+        d1[0], d1[1], d1[2], d1[3], d1[4], d1[5], d1[6]
+    );
 
+    display_hex dezena(
+        B0, B1, B2, B3,
+        d2[0], d2[1], d2[2], d2[3], d2[4], d2[5], d2[6]
+    );
 
-	display_hex unidade(A0, A1, A2, A3, Ua, Ub, Uc, Ud, Ue, Uf, Ug);
-	display_hex dezena(B0, B1, B2, B3, Da, Db, Dc, Dd, De, Df, Dg);
-	
 endmodule
+
+
+

@@ -15,3 +15,16 @@ module register_8bit(in, en, out, reset);
     d_flipflop dff7 (.q(out[7]), .d(in[7]), .reset(reset), .clk(en));
     
 endmodule
+
+module register_16bit(in, en, out, reset);
+	input [15:0] in;
+   input en; // Enable - Vai carregar o valor nos flipflops
+	input reset;
+   output [15:0] out;
+	
+	register_8bit reg1(in[7:0], en, out[7:0], reset);
+	register_8bit reg2(in[15:0], en, out[15:0], reset);
+	
+endmodule
+	
+	

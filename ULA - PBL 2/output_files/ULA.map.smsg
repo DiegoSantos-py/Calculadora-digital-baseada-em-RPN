@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at display_octal.v(6): object "A" differs only in case from object "a" in the same scope File: D:/rep_ula/ULA - PBL 2/display_octal.v Line: 6
+Info (10281): Verilog HDL Declaration information at display_octal.v(7): object "B" differs only in case from object "b" in the same scope File: D:/rep_ula/ULA - PBL 2/display_octal.v Line: 7
+Info (10281): Verilog HDL Declaration information at display_octal.v(8): object "C" differs only in case from object "c" in the same scope File: D:/rep_ula/ULA - PBL 2/display_octal.v Line: 8
+Info (10281): Verilog HDL Declaration information at display_octal.v(63): object "D1" differs only in case from object "d1" in the same scope File: D:/rep_ula/ULA - PBL 2/display_octal.v Line: 63
+Info (10281): Verilog HDL Declaration information at display_octal.v(63): object "D2" differs only in case from object "d2" in the same scope File: D:/rep_ula/ULA - PBL 2/display_octal.v Line: 63

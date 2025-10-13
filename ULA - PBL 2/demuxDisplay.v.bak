@@ -1,0 +1,77 @@
+
+module demuxDisplay(
+    input [15:0] D,       // entrada de dados
+    input [1:0] SEL,      // seletor
+    output [15:0] OUT1,   // saída 1
+    output [15:0] OUT2,   // saída 2
+    output [15:0] OUT3    // saída 3
+);
+
+    // ---------------------------
+    // Decodificação do seletor
+    // ---------------------------
+    wire nSEL0, nSEL1;
+    wire s1, s2, s3;
+
+    not (nSEL0, SEL[0]);
+    not (nSEL1, SEL[1]);
+
+    and (s1, nSEL1, nSEL0);   // 00 → saída 1
+    and (s2, nSEL1, SEL[0]);  // 01 → saída 2
+    and (s3, SEL[1], nSEL0);  // 10 → saída 3
+
+    // ---------------------------
+    // Direcionamento manual dos 16 bits
+    // ---------------------------
+    and (OUT1[0], D[0], s1);
+    and (OUT1[1], D[1], s1);
+    and (OUT1[2], D[2], s1);
+    and (OUT1[3], D[3], s1);
+    and (OUT1[4], D[4], s1);
+    and (OUT1[5], D[5], s1);
+    and (OUT1[6], D[6], s1);
+    and (OUT1[7], D[7], s1);
+    and (OUT1[8], D[8], s1);
+    and (OUT1[9], D[9], s1);
+    and (OUT1[10], D[10], s1);
+    and (OUT1[11], D[11], s1);
+    and (OUT1[12], D[12], s1);
+    and (OUT1[13], D[13], s1);
+    and (OUT1[14], D[14], s1);
+    and (OUT1[15], D[15], s1);
+
+    and (OUT2[0], D[0], s2);
+    and (OUT2[1], D[1], s2);
+    and (OUT2[2], D[2], s2);
+    and (OUT2[3], D[3], s2);
+    and (OUT2[4], D[4], s2);
+    and (OUT2[5], D[5], s2);
+    and (OUT2[6], D[6], s2);
+    and (OUT2[7], D[7], s2);
+    and (OUT2[8], D[8], s2);
+    and (OUT2[9], D[9], s2);
+    and (OUT2[10], D[10], s2);
+    and (OUT2[11], D[11], s2);
+    and (OUT2[12], D[12], s2);
+    and (OUT2[13], D[13], s2);
+    and (OUT2[14], D[14], s2);
+    and (OUT2[15], D[15], s2);
+
+    and (OUT3[0], D[0], s3);
+    and (OUT3[1], D[1], s3);
+    and (OUT3[2], D[2], s3);
+    and (OUT3[3], D[3], s3);
+    and (OUT3[4], D[4], s3);
+    and (OUT3[5], D[5], s3);
+    and (OUT3[6], D[6], s3);
+    and (OUT3[7], D[7], s3);
+    and (OUT3[8], D[8], s3);
+    and (OUT3[9], D[9], s3);
+    and (OUT3[10], D[10], s3);
+    and (OUT3[11], D[11], s3);
+    and (OUT3[12], D[12], s3);
+    and (OUT3[13], D[13], s3);
+    and (OUT3[14], D[14], s3);
+    and (OUT3[15], D[15], s3);
+
+endmodule

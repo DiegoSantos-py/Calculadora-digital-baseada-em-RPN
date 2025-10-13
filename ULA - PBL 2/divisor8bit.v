@@ -4,14 +4,14 @@ module mux_divisor(out, A, B, sel);
 	input [7:0]B;
 	output [7:0]out;
 	
-	mux1 mux01(out[0], A[0], B[0], sel);
-	mux1 mux02(out[1], A[1], B[1], sel);
-	mux1 mux03(out[2], A[2], B[2], sel);
-	mux1 mux04(out[3], A[3], B[3], sel);
-	mux1 mux05(out[4], A[4], B[4], sel);
-	mux1 mux06(out[5], A[5], B[5], sel);
-	mux1 mux07(out[6], A[6], B[6], sel);
-	mux1 mux08(out[7], A[7], B[7], sel);
+	mux2x1 mux01(out[0], A[0], B[0], sel);
+	mux2x1 mux02(out[1], A[1], B[1], sel);
+	mux2x1 mux03(out[2], A[2], B[2], sel);
+	mux2x1 mux04(out[3], A[3], B[3], sel);
+	mux2x1 mux05(out[4], A[4], B[4], sel);
+	mux2x1 mux06(out[5], A[5], B[5], sel);
+	mux2x1 mux07(out[6], A[6], B[6], sel);
+	mux2x1 mux08(out[7], A[7], B[7], sel);
 endmodule
 
 module divisor8bit(Q, A, B);

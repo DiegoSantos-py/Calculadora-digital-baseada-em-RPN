@@ -11,7 +11,7 @@ module mux2x1(out, in0, in1, sel);
 endmodule
 
 
-module mux8bit(
+module mux8bit( 
 	input in0,
 	input in1,
 	input in2,
@@ -20,12 +20,12 @@ module mux8bit(
 	input in5,
 	input in6,
 	input in7,
-	input [2:0]sel,
+	input [3:0]sel,
 	output out
 	);
 	
 	wire w0, w1, w2, w3, w4, w5, w6, w7;
-	wire [2:0]nsel;
+	wire [3:0]nsel;
 	
 	not notsel0(nsel[0], sel[0]);
 	not notsel1(nsel[1], sel[1]);
@@ -46,23 +46,25 @@ module mux8bit(
 	and and06(w6, nsel[0], sel[1], sel[2], in6);
 	
 	and and07(w7, sel[0], sel[1], sel[2], in7);
+
 	
 	or or00(out, w0, w1, w2, w3, w4, w5, w6, w7);
 	
 endmodule
 
 
+
 module mux(
-	input [7:0]in0,
+	input [8:0]in0,
 	input [7:0]in1,
-	input [7:0]in2,
+	input [15:0]in2,
 	input [7:0]in3,
 	input [7:0]in4,
 	input [7:0]in5,
 	input [7:0]in6,
 	input [7:0]in7,
 	input [2:0]sel,
-	output [7:0]out
+	output [15:0]out
 	);
 	
 	
@@ -74,6 +76,14 @@ module mux(
 	mux8bit mux05(in0[5], in1[5],in2[5],in3[5],in4[5],in5[5],in6[5],in7[5],sel, out[5]);
 	mux8bit mux06(in0[6], in1[6],in2[6],in3[6],in4[6],in5[6],in6[6],in7[6],sel, out[6]);
 	mux8bit mux07(in0[7], in1[7],in2[7],in3[7],in4[7],in5[7],in6[7],in7[7],sel, out[7]);
+	mux8bit mux08(in0[8], 1'b0,in2[8],1'b0, 1'b0, 1'b0, 1'b0, 1'b0,sel, out[8]);
+	mux8bit mux09(1'b0, 1'b0,in2[9],1'b0, 1'b0, 1'b0, 1'b0, 1'b0,sel, out[9]);
+	mux8bit mux10(1'b0, 1'b0,in2[10],1'b0, 1'b0, 1'b0, 1'b0, 1'b0 ,sel, out[10]);
+	mux8bit mux11(1'b0, 1'b0,in2[11],1'b0, 1'b0, 1'b0, 1'b0, 1'b0 ,sel, out[11]);
+	mux8bit mux12(1'b0, 1'b0,in2[12],1'b0, 1'b0, 1'b0, 1'b0, 1'b0 ,sel, out[12]);
+	mux8bit mux13(1'b0, 1'b0,in2[13],1'b0, 1'b0, 1'b0, 1'b0, 1'b0 ,sel, out[13]);
+	mux8bit mux14(1'b0, 1'b0,in2[14],1'b0, 1'b0, 1'b0, 1'b0, 1'b0 ,sel, out[14]);
+	mux8bit mux15(1'b0, 1'b0,in2[15],1'b0, 1'b0, 1'b0, 1'b0, 1'b0 ,sel, out[15]);
 	
 endmodule
 

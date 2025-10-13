@@ -19,88 +19,132 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/08/2025 13:21:06"
+// Generated on "10/13/2025 18:03:40"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          shift_register
+// Verilog Test Bench (with test vectors) for design :                          display7seg
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module shift_register_vlg_vec_tst();
+module display7seg_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg en;
-reg [7:0] in;
+reg [15:0] Data;
+reg [1:0] sel;
 // wires                                               
-wire [1:0] counter;
-wire execute;
-wire [7:0] out1;
-wire [7:0] out2;
-wire [7:0] out3;
+wire [6:0] d1;
+wire [6:0] d2;
+wire [6:0] d3;
+wire [6:0] d4;
+wire [6:0] d5;
+wire [6:0] d6;
 
 // assign statements (if any)                          
-shift_register i1 (
+display7seg i1 (
 // port map - connection between master ports and signals/registers   
-	.counter(counter),
-	.en(en),
-	.execute(execute),
-	.in(in),
-	.out1(out1),
-	.out2(out2),
-	.out3(out3)
+	.Data(Data),
+	.d1(d1),
+	.d2(d2),
+	.d3(d3),
+	.d4(d4),
+	.d5(d5),
+	.d6(d6),
+	.sel(sel)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
-
-// en
-always
-begin
-	en = 1'b0;
-	en = #50000 1'b1;
-	#50000;
-end 
-// in[ 7 ]
+// Data[ 15 ]
 initial
 begin
-	in[7] = 1'b0;
+	Data[15] = 1'b0;
 end 
-// in[ 6 ]
+// Data[ 14 ]
 initial
 begin
-	in[6] = 1'b0;
+	Data[14] = 1'b0;
 end 
-// in[ 5 ]
+// Data[ 13 ]
 initial
 begin
-	in[5] = 1'b0;
+	Data[13] = 1'b0;
 end 
-// in[ 4 ]
+// Data[ 12 ]
 initial
 begin
-	in[4] = 1'b0;
+	Data[12] = 1'b0;
 end 
-// in[ 3 ]
+// Data[ 11 ]
 initial
 begin
-	in[3] = 1'b0;
+	Data[11] = 1'b0;
 end 
-// in[ 2 ]
+// Data[ 10 ]
 initial
 begin
-	in[2] = 1'b0;
+	Data[10] = 1'b0;
 end 
-// in[ 1 ]
+// Data[ 9 ]
 initial
 begin
-	in[1] = 1'b0;
+	Data[9] = 1'b0;
 end 
-// in[ 0 ]
+// Data[ 8 ]
 initial
 begin
-	in[0] = 1'b0;
+	Data[8] = 1'b0;
+end 
+// Data[ 7 ]
+initial
+begin
+	Data[7] = 1'b0;
+end 
+// Data[ 6 ]
+initial
+begin
+	Data[6] = 1'b1;
+end 
+// Data[ 5 ]
+initial
+begin
+	Data[5] = 1'b1;
+end 
+// Data[ 4 ]
+initial
+begin
+	Data[4] = 1'b0;
+end 
+// Data[ 3 ]
+initial
+begin
+	Data[3] = 1'b1;
+end 
+// Data[ 2 ]
+initial
+begin
+	Data[2] = 1'b0;
+end 
+// Data[ 1 ]
+initial
+begin
+	Data[1] = 1'b1;
+end 
+// Data[ 0 ]
+initial
+begin
+	Data[0] = 1'b1;
+end 
+// sel[ 1 ]
+initial
+begin
+	sel[1] = 1'b1;
+end 
+// sel[ 0 ]
+initial
+begin
+	sel[0] = 1'b0;
 end 
 endmodule
 

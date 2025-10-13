@@ -60,151 +60,55 @@
 					"strict" : false
 				},
 				{
-					"name" : "d3[0]",
+					"name" : "FlagCarryOut",
 					"strict" : false
 				},
 				{
-					"name" : "d3[1]",
+					"name" : "FlagZero",
 					"strict" : false
 				},
 				{
-					"name" : "d3[2]",
+					"name" : "sel_ope[0]",
 					"strict" : false
 				},
 				{
-					"name" : "d3[3]",
+					"name" : "sel_ope[1]",
 					"strict" : false
 				},
 				{
-					"name" : "d3[4]",
+					"name" : "A[0]",
 					"strict" : false
 				},
 				{
-					"name" : "d3[5]",
+					"name" : "A[1]",
 					"strict" : false
 				},
 				{
-					"name" : "d3[6]",
+					"name" : "A[2]",
 					"strict" : false
 				},
 				{
-					"name" : "d4[0]",
+					"name" : "A[7]",
 					"strict" : false
 				},
 				{
-					"name" : "d4[1]",
+					"name" : "A[6]",
 					"strict" : false
 				},
 				{
-					"name" : "d4[2]",
+					"name" : "A[5]",
 					"strict" : false
 				},
 				{
-					"name" : "d4[3]",
+					"name" : "A[4]",
 					"strict" : false
 				},
 				{
-					"name" : "d4[4]",
+					"name" : "A[3]",
 					"strict" : false
 				},
 				{
-					"name" : "d4[5]",
-					"strict" : false
-				},
-				{
-					"name" : "d4[6]",
-					"strict" : false
-				},
-				{
-					"name" : "d5[0]",
-					"strict" : false
-				},
-				{
-					"name" : "d5[1]",
-					"strict" : false
-				},
-				{
-					"name" : "d5[2]",
-					"strict" : false
-				},
-				{
-					"name" : "d5[3]",
-					"strict" : false
-				},
-				{
-					"name" : "d5[4]",
-					"strict" : false
-				},
-				{
-					"name" : "d5[5]",
-					"strict" : false
-				},
-				{
-					"name" : "d5[6]",
-					"strict" : false
-				},
-				{
-					"name" : "d6[0]",
-					"strict" : false
-				},
-				{
-					"name" : "d6[1]",
-					"strict" : false
-				},
-				{
-					"name" : "d6[2]",
-					"strict" : false
-				},
-				{
-					"name" : "d6[3]",
-					"strict" : false
-				},
-				{
-					"name" : "d6[4]",
-					"strict" : false
-				},
-				{
-					"name" : "d6[5]",
-					"strict" : false
-				},
-				{
-					"name" : "d6[6]",
-					"strict" : false
-				},
-				{
-					"name" : "execute",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[2]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[0]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[5]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[3]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[1]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[4]",
-					"strict" : false
-				},
-				{
-					"name" : "data_in[6]",
-					"strict" : false
-				},
-				{
-					"name" : "switch_in",
+					"name" : "Enable",
 					"strict" : false
 				},
 				{
