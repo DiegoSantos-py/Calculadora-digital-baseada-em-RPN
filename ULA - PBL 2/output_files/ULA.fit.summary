@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Oct 09 00:04:25 2025
+Fitter Status : Successful - Sun Oct 12 23:07:17 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ULA
-Top-level Entity Name : divisor8bit
+Top-level Entity Name : top
 Family : MAX 10
 Device : 10M02DCU324A6G
 Timing Models : Final
-Total logic elements : 91 / 2,304 ( 4 % )
-    Total combinational functions : 91 / 2,304 ( 4 % )
-    Dedicated logic registers : 0 / 2,304 ( 0 % )
-Total registers : 0
-Total pins : 24 / 160 ( 15 % )
+Total logic elements : 324 / 2,304 ( 14 % )
+    Total combinational functions : 298 / 2,304 ( 13 % )
+    Dedicated logic registers : 46 / 2,304 ( 2 % )
+Total registers : 46
+Total pins : 59 / 160 ( 37 % )
 Total virtual pins : 0
 Total memory bits : 0 / 110,592 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 32 ( 0 % )

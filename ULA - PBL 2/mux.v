@@ -1,4 +1,4 @@
-module mux1(out, in0, in1, sel);
+module mux2x1(out, in0, in1, sel);
     input in0, in1, sel;
     output out;
     
@@ -9,6 +9,7 @@ module mux1(out, in0, in1, sel);
     and (w2, in1, sel);
     or  (out, w1, w2);
 endmodule
+
 
 module mux8bit(
 	input in0,

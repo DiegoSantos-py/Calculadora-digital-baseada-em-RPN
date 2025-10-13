@@ -4,99 +4,211 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Q[0]",
+					"name" : "d1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[1]",
+					"name" : "d1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[2]",
+					"name" : "d1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[3]",
+					"name" : "d1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[4]",
+					"name" : "d1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[5]",
+					"name" : "d1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[6]",
+					"name" : "d1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[7]",
+					"name" : "d2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "B[7]",
+					"name" : "d2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B[6]",
+					"name" : "d2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "B[5]",
+					"name" : "d2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "B[4]",
+					"name" : "d2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "d2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "A[2]",
+					"name" : "d2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "B[0]",
+					"name" : "d3[0]",
 					"strict" : false
 				},
 				{
-					"name" : "B[2]",
+					"name" : "d3[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B[1]",
+					"name" : "d3[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A[5]",
+					"name" : "d3[3]",
 					"strict" : false
 				},
 				{
-					"name" : "A[6]",
+					"name" : "d3[4]",
 					"strict" : false
 				},
 				{
-					"name" : "A[7]",
+					"name" : "d3[5]",
 					"strict" : false
 				},
 				{
-					"name" : "A[4]",
+					"name" : "d3[6]",
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "d4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "A[0]",
+					"name" : "d4[1]",
 					"strict" : false
 				},
 				{
-					"name" : "A[1]",
+					"name" : "d4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d6[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d6[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d6[6]",
+					"strict" : false
+				},
+				{
+					"name" : "execute",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "switch_in",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				}
 			]

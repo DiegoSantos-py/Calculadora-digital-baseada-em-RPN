@@ -1,0 +1,37 @@
+module divisor_frequencia(en, reset, out);
+    input en;
+    input reset;
+    output [17:0] out;
+    
+    wire [3:0] count0, count1, count2, count3;
+    wire [1:0] count4;
+    wire carry0, carry1, carry2, carry3, carry4_0;
+    wire not_count4_0, not_count4_1;
+    
+    // Contadores 0-3
+    contador_mod16 counter0(.en(en), .reset(reset), .out(count0));
+    and(carry0, count0[0], count0[1], count0[2], count0[3]);
+    
+    contador_mod16 counter1(.en(carry0), .reset(reset), .out(count1));
+    and(carry1, count1[0], count1[1], count1[2], count1[3], carry0);
+    
+    contador_mod16 counter2(.en(carry1), .reset(reset), .out(count2));
+    and(carry2, count2[0], count2[1], count2[2], count2[3], carry1);
+    
+    contador_mod16 counter3(.en(carry2), .reset(reset), .out(count3));
+    and(carry3, count3[0], count3[1], count3[2], count3[3], carry2);
+    
+    // Contador 4 (2 bits)
+    not(not_count4_0, count4[0]);
+    not(not_count4_1, count4[1]);
+    
+    d_flipflop dff4_0(.q(count4[0]), .d(not_count4_0), .reset(reset), .clk(carry3));
+    and(carry4_0, count4[0], carry3);
+    d_flipflop dff4_1(.q(count4[1]), .d(not_count4_1), .reset(reset), .clk(carry4_0));
+    
+    // Conexão direta das saídas (sem assign)
+    // O synthesizer entenderá que estas são conexões diretas
+    // Bits 0-15 dos contadores módulo 16
+    // Bits 16-17 do contador de 2 bits
+    
+endmodule

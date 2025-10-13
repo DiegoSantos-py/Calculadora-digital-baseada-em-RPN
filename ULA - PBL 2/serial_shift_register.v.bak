@@ -1,0 +1,65 @@
+module serial_shift_register(
+    input [7:0] in1, in2,
+    input in_carry,
+    input clk_load,   // clock para carga paralela
+    input clk_shift,  // clock para deslocamento serial
+    input reset,
+    output [7:0] reg2_shift_q, reg3_shift_q,
+    output reg1_shift_q
+);
+
+    // --- REG1 ---
+    wire reg1_q;
+    d_flipflop reg1_load (.d(in_carry), .clk(clk_load), .reset(reset), .q(reg1_q));
+
+    // --- REG2 ---
+    wire [7:0] reg2_q;
+    d_flipflop reg2_load0 (.d(in1[0]), .clk(clk_load), .reset(reset), .q(reg2_q[0]));
+    d_flipflop reg2_load1 (.d(in1[1]), .clk(clk_load), .reset(reset), .q(reg2_q[1]));
+    d_flipflop reg2_load2 (.d(in1[2]), .clk(clk_load), .reset(reset), .q(reg2_q[2]));
+    d_flipflop reg2_load3 (.d(in1[3]), .clk(clk_load), .reset(reset), .q(reg2_q[3]));
+    d_flipflop reg2_load4 (.d(in1[4]), .clk(clk_load), .reset(reset), .q(reg2_q[4]));
+    d_flipflop reg2_load5 (.d(in1[5]), .clk(clk_load), .reset(reset), .q(reg2_q[5]));
+    d_flipflop reg2_load6 (.d(in1[6]), .clk(clk_load), .reset(reset), .q(reg2_q[6]));
+    d_flipflop reg2_load7 (.d(in1[7]), .clk(clk_load), .reset(reset), .q(reg2_q[7]));
+
+    // --- REG3 ---
+    wire [7:0] reg3_q;
+    d_flipflop reg3_load0 (.d(in2[0]), .clk(clk_load), .reset(reset), .q(reg3_q[0]));
+    d_flipflop reg3_load1 (.d(in2[1]), .clk(clk_load), .reset(reset), .q(reg3_q[1]));
+    d_flipflop reg3_load2 (.d(in2[2]), .clk(clk_load), .reset(reset), .q(reg3_q[2]));
+    d_flipflop reg3_load3 (.d(in2[3]), .clk(clk_load), .reset(reset), .q(reg3_q[3]));
+    d_flipflop reg3_load4 (.d(in2[4]), .clk(clk_load), .reset(reset), .q(reg3_q[4]));
+    d_flipflop reg3_load5 (.d(in2[5]), .clk(clk_load), .reset(reset), .q(reg3_q[5]));
+    d_flipflop reg3_load6 (.d(in2[6]), .clk(clk_load), .reset(reset), .q(reg3_q[6]));
+    d_flipflop reg3_load7 (.d(in2[7]), .clk(clk_load), .reset(reset), .q(reg3_q[7]));
+
+    // Agora, os mesmos dados são conectados a outro conjunto de FFs para o deslocamento serial.
+
+    // --- REGISTRO DE DESLOCAMENTO (estrutura física em série) ---
+    wire [7:0] reg2_shift_q;
+    wire [7:0] reg3_shift_q;
+    wire reg1_shift_q;
+
+    // Fluxo: reg1 → reg2[0] → ... → reg2[7] → reg3[0] → ... → reg3[7]
+    d_flipflop sff1 (.d(1'b0), .clk(clk_shift), .reset(reset), .q(reg1_shift_q));
+
+    d_flipflop sff2_0 (.d(reg1_q),   .clk(clk_shift), .reset(reset), .q(reg2_shift_q[0]));
+    d_flipflop sff2_1 (.d(reg2_q[0]), .clk(clk_shift), .reset(reset), .q(reg2_shift_q[1]));
+    d_flipflop sff2_2 (.d(reg2_q[1]), .clk(clk_shift), .reset(reset), .q(reg2_shift_q[2]));
+    d_flipflop sff2_3 (.d(reg2_q[2]), .clk(clk_shift), .reset(reset), .q(reg2_shift_q[3]));
+    d_flipflop sff2_4 (.d(reg2_q[3]), .clk(clk_shift), .reset(reset), .q(reg2_shift_q[4]));
+    d_flipflop sff2_5 (.d(reg2_q[4]), .clk(clk_shift), .reset(reset), .q(reg2_shift_q[5]));
+    d_flipflop sff2_6 (.d(reg2_q[5]), .clk(clk_shift), .reset(reset), .q(reg2_shift_q[6]));
+    d_flipflop sff2_7 (.d(reg2_q[6]), .clk(clk_shift), .reset(reset), .q(reg2_shift_q[7]));
+
+    d_flipflop sff3_0 (.d(reg2_q[7]), .clk(clk_shift), .reset(reset), .q(reg3_shift_q[0]));
+    d_flipflop sff3_1 (.d(reg3_q[0]), .clk(clk_shift), .reset(reset), .q(reg3_shift_q[1]));
+    d_flipflop sff3_2 (.d(reg3_q[1]), .clk(clk_shift), .reset(reset), .q(reg3_shift_q[2]));
+    d_flipflop sff3_3 (.d(reg3_q[2]), .clk(clk_shift), .reset(reset), .q(reg3_shift_q[3]));
+    d_flipflop sff3_4 (.d(reg3_q[3]), .clk(clk_shift), .reset(reset), .q(reg3_shift_q[4]));
+    d_flipflop sff3_5 (.d(reg3_q[4]), .clk(clk_shift), .reset(reset), .q(reg3_shift_q[5]));
+    d_flipflop sff3_6 (.d(reg3_q[5]), .clk(clk_shift), .reset(reset), .q(reg3_shift_q[6]));
+    d_flipflop sff3_7 (.d(reg3_q[6]), .clk(clk_shift), .reset(reset), .q(reg3_shift_q[7]));
+
+endmodule

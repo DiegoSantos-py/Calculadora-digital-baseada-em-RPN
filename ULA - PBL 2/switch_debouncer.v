@@ -1,22 +1,33 @@
 module switch_debouncer(
-    input clk,          // clock interno da FPGA
-    input switch_raw,   // sinal direto do switch
-    output pulse        // pulso único por ativação
+    input wire clk,   // clock principal da FPGA
+    input wire reset,
+    input wire botao_raw,   // botão com bounce
+    output wire botao_ok    // botão estável
 );
+    wire clk_out, clk_aux, clk_botao;
 
-    wire sync0, sync1;  // FFs de sincronização
-    wire prev_sync1;    // FF que guarda estado anterior
-    wire not_prev;      
+    // 1️⃣Gera clocks lentos
+    divisor_frequencia div_inst(
+        .clk(clk),
+        .clk_out(clk_out),
+        .clk_aux(clk_aux),
+        .clk_botao(clk_botao)
+    );
 
-    // ===== sincronização do switch =====
-    d_flipflop ff0(.q(sync0), .d(switch_raw), .reset(1'b0), .clk(clk));
-    d_flipflop ff1(.q(sync1), .d(sync0), .reset(1'b0), .clk(clk));
+    // 2️⃣Sincroniza o botão no clock lento
+    wire botao_sync;
+    d_flipflop sync1(
+        .d(botao_raw),
+        .clk(clk_botao),   // clock bem mais lento (~32Hz)
+        .reset(reset),
+        .q(botao_sync)
+    );
 
-    // ===== FF que guarda estado anterior do switch =====
-    d_flipflop ff_prev(.q(prev_sync1), .d(sync1), .reset(1'b0), .clk(clk));
-
-    // ===== pulso único: sobe apenas na transição 0 -> 1 =====
-    not not_prev_gate(not_prev, prev_sync1);
-    and and_pulse(pulse, sync1, not_prev);
-
+    // 3️⃣Saída estável
+    d_flipflop stable(
+        .d(botao_sync),
+        .clk(clk_botao),
+        .reset(reset),
+        .q(botao_ok)
+    );
 endmodule
