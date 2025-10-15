@@ -1,0 +1,68 @@
+module decoder_decimal(
+    input A, B, C, D,
+    output a, b, c, d, e, f, g
+);
+
+    // =====================================================
+    // Fios intermediários
+    // =====================================================
+    wire notA, notB, notC, notD;
+    wire and1, and2, and3, and4, and5, and6, and7, and8;
+    wire and9, and10, and11, and12, and13, and14;
+    wire xor1, xnor1;
+   
+    // Portas NOT
+    not not_gateA(notA, A);
+    not not_gateB(notB, B);
+    not not_gateC(notC, C);
+    not not_gateD(notD, D);
+
+	 //A
+    xor xor_gate1(xor1, C, D);      
+    xnor xnor_gate1(xnor1, B, D);  
+	 
+    wire not_xor1;
+    not not_xor(not_xor1, xor1); 
+    
+    and and_gate1(and1, notA, notC);
+    and and_gate2(a, and1, not_xor1);
+    
+	 //B
+    and and_gate3(b, B, xor1);
+    
+	 //C
+    and and_gate4(and4, notB, C);
+    and and_gate5(c, and4, notD);
+    
+	 //D
+    and and_gate6(and6, notB, notC);
+    and and_gate7(and7, and6, D);
+    
+    and and_gate8(and8, B, xnor1);
+    
+    or or_gate1(and9, and7, and8);
+    and and_gate10(d, notA, and9);
+    
+	 //E
+    and and_gate11(and11, B, notC);
+    or or_gate2(e, D, and11);
+	
+	 //F
+    wire or3;
+    or or_gate3(or3, C, D);
+    and and_gate12(and12, notB, or3);
+    
+    and and_gate13(and13, C, D);
+    
+    or or_gate4(and14, and12, and13);
+    and and_gate15(f, notA, and14);
+
+    and and_gate16(and15, notB, notC);
+    
+    and and_gate17(and16, B, C);
+    and and_gate18(and17, and16, D);
+    
+    or or_gate5(and18, and15, and17);
+    and and_gate19(g, notA, and18);
+
+endmodule

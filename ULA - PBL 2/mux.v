@@ -10,6 +10,21 @@ module mux2x1(out, in0, in1, sel);
     or  (out, w1, w2);
 endmodule
 
+module mux_register(out, A, B, sel);
+	input [7:0]A, B; 
+	input sel;
+	output [7:0]out;
+	
+	mux2x1(out[0], A[0], B[0], sel);
+	mux2x1(out[1], A[1], B[1], sel);
+	mux2x1(out[2], A[2], B[2], sel);
+	mux2x1(out[3], A[3], B[3], sel);
+	mux2x1(out[4], A[4], B[4], sel);
+	mux2x1(out[5], A[5], B[5], sel);
+	mux2x1(out[6], A[6], B[6], sel);
+	mux2x1(out[7], A[7], B[7], sel);
+	
+endmodule
 
 module mux8bit( 
 	input in0,

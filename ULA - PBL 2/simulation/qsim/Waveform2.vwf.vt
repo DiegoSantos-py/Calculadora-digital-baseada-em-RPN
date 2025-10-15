@@ -19,190 +19,136 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/13/2025 17:57:09"
+// Generated on "10/14/2025 19:56:48"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          display_octal
+// Verilog Test Bench (with test vectors) for design :                          multiplicador8bit
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module display_octal_vlg_vec_tst();
+module multiplicador8bit_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg A0;
-reg A1;
-reg A2;
-reg B0;
-reg B1;
-reg B2;
-reg C0;
-reg C1;
-reg C2;
-reg D0;
-reg D1;
-reg D2;
-reg E0;
-reg E1;
-reg E2;
-reg F0;
-reg F1;
-reg F2;
-reg Naousado;
+reg [7:0] A;
+reg [7:0] B;
+reg clk;
+reg reset;
+reg start;
 // wires                                               
-wire [6:0] d1;
-wire [6:0] d2;
-wire [6:0] d3;
-wire [6:0] d4;
-wire [6:0] d5;
-wire [6:0] d6;
+wire done;
+wire [15:0] out;
 
 // assign statements (if any)                          
-display_octal i1 (
+multiplicador8bit i1 (
 // port map - connection between master ports and signals/registers   
-	.A0(A0),
-	.A1(A1),
-	.A2(A2),
-	.B0(B0),
-	.B1(B1),
-	.B2(B2),
-	.C0(C0),
-	.C1(C1),
-	.C2(C2),
-	.D0(D0),
-	.D1(D1),
-	.D2(D2),
-	.E0(E0),
-	.E1(E1),
-	.E2(E2),
-	.F0(F0),
-	.F1(F1),
-	.F2(F2),
-	.Naousado(Naousado),
-	.d1(d1),
-	.d2(d2),
-	.d3(d3),
-	.d4(d4),
-	.d5(d5),
-	.d6(d6)
+	.A(A),
+	.B(B),
+	.clk(clk),
+	.done(done),
+	.out(out),
+	.reset(reset),
+	.start(start)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
-
-// A0
+// A[ 7 ]
 initial
 begin
-	A0 = 1'b1;
+	A[7] = 1'b0;
+end 
+// A[ 6 ]
+initial
+begin
+	A[6] = 1'b0;
+end 
+// A[ 5 ]
+initial
+begin
+	A[5] = 1'b0;
+end 
+// A[ 4 ]
+initial
+begin
+	A[4] = 1'b0;
+end 
+// A[ 3 ]
+initial
+begin
+	A[3] = 1'b0;
+end 
+// A[ 2 ]
+initial
+begin
+	A[2] = 1'b0;
+end 
+// A[ 1 ]
+initial
+begin
+	A[1] = 1'b1;
+end 
+// A[ 0 ]
+initial
+begin
+	A[0] = 1'b0;
+end 
+// B[ 7 ]
+initial
+begin
+	B[7] = 1'b0;
+end 
+// B[ 6 ]
+initial
+begin
+	B[6] = 1'b0;
+end 
+// B[ 5 ]
+initial
+begin
+	B[5] = 1'b0;
+end 
+// B[ 4 ]
+initial
+begin
+	B[4] = 1'b0;
+end 
+// B[ 3 ]
+initial
+begin
+	B[3] = 1'b0;
+end 
+// B[ 2 ]
+initial
+begin
+	B[2] = 1'b0;
+end 
+// B[ 1 ]
+initial
+begin
+	B[1] = 1'b0;
+end 
+// B[ 0 ]
+initial
+begin
+	B[0] = 1'b1;
 end 
 
-// A1
-initial
+// clk
+always
 begin
-	A1 = 1'b0;
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
 end 
 
-// A2
-initial
+// start
+always
 begin
-	A2 = 1'b0;
-end 
-
-// B0
-initial
-begin
-	B0 = 1'b1;
-end 
-
-// B1
-initial
-begin
-	B1 = 1'b0;
-end 
-
-// B2
-initial
-begin
-	B2 = 1'b0;
-end 
-
-// C0
-initial
-begin
-	C0 = 1'b0;
-end 
-
-// C1
-initial
-begin
-	C1 = 1'b0;
-end 
-
-// C2
-initial
-begin
-	C2 = 1'b0;
-end 
-
-// D0
-initial
-begin
-	D0 = 1'b0;
-end 
-
-// D1
-initial
-begin
-	D1 = 1'b0;
-end 
-
-// D2
-initial
-begin
-	D2 = 1'b0;
-end 
-
-// E0
-initial
-begin
-	E0 = 1'b0;
-end 
-
-// E1
-initial
-begin
-	E1 = 1'b0;
-end 
-
-// E2
-initial
-begin
-	E2 = 1'b0;
-end 
-
-// F0
-initial
-begin
-	F0 = 1'b0;
-end 
-
-// F1
-initial
-begin
-	F1 = 1'b0;
-end 
-
-// F2
-initial
-begin
-	F2 = 1'b0;
-end 
-
-// Naousado
-initial
-begin
-	Naousado = 1'b0;
+	start = 1'b0;
+	start = #25000 1'b1;
+	#25000;
 end 
 endmodule
 

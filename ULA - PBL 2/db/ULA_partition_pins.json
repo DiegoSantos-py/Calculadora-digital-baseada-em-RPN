@@ -60,6 +60,34 @@
 					"strict" : false
 				},
 				{
+					"name" : "d3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d3[6]",
+					"strict" : false
+				},
+				{
 					"name" : "FlagCarryOut",
 					"strict" : false
 				},
@@ -80,19 +108,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "last_operation",
+					"strict" : false
+				},
+				{
 					"name" : "A[1]",
 					"strict" : false
 				},
 				{
 					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[7]",
-					"strict" : false
-				},
-				{
-					"name" : "A[6]",
 					"strict" : false
 				},
 				{
@@ -105,6 +129,14 @@
 				},
 				{
 					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "A[6]",
 					"strict" : false
 				},
 				{

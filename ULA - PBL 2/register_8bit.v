@@ -23,7 +23,7 @@ module register_16bit(in, en, out, reset);
    output [15:0] out;
 	
 	register_8bit reg1(in[7:0], en, out[7:0], reset);
-	register_8bit reg2(in[15:0], en, out[15:0], reset);
+	register_8bit reg2(in[15:8], en, out[15:8], reset);
 	
 endmodule
 	

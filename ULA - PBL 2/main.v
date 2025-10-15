@@ -1,9 +1,10 @@
-module main(A, Enable, clk, d1, d2, d3, d4, d5, d6, FlagCarryOut, FlagErro, FlagZero, FlagOverflow, sel_ope);
+module main(A, Enable, clk, d1, d2, d3, d4, d5, d6, FlagCarryOut, FlagErro, FlagZero, FlagOverflow, sel_ope, last_operation);
 
 	input [7:0]A; // Entrada
 	input [1:0]sel_ope;
 	input Enable; // Enter
 	input clk; // Clock padrao da FPGA
+	input last_operation;
 	output [6:0]d1, d2, d3, d4, d5, d6; // Displays
 	output FlagCarryOut, FlagErro, FlagZero, FlagOverflow; // Flags
 	
@@ -14,15 +15,18 @@ module main(A, Enable, clk, d1, d2, d3, d4, d5, d6, FlagCarryOut, FlagErro, Flag
 	wire fioOverflow, fioErro, fioCarry;
 	wire bout;
 	
-	wire [7:0] Data_A, Data_B;
+	wire [7:0] Data_A, Data_B, Data_in;
 	wire [2:0] Ope; // guarda os bits de operaçao
 	wire executar; //permite que a operaçao aconteça
 	 
 	//===================Shift register/debounce==========================
+	// Escolhe se o valor da última operação será usado
+	mux_register mux_last_operation(Data_in, A, last_result, last_operation); 
+	
 	top(
    .clk(clk),          
    .switch_in(Enable),    
-   .data_in(A),
+   .data_in(Data_in),
    .out1(Ope), .out2(Data_B), .out3(Data_A),
    .execute(executar));
 
@@ -56,6 +60,7 @@ module main(A, Enable, clk, d1, d2, d3, d4, d5, d6, FlagCarryOut, FlagErro, Flag
 	dividir_5 div_clk (.clk(clk), .clk_out(clk_dividido));
 	and gerar_pulso_reg (register_pulse, clk_dividido, executar);
 	register_8bit(mux, register_pulse, last_result, reset);
+	
 	//============================================================================
 	
 	// Trava a exibiçao do resultado ate que o operador seja incluido
@@ -70,7 +75,6 @@ module main(A, Enable, clk, d1, d2, d3, d4, d5, d6, FlagCarryOut, FlagErro, Flag
 	
 	//===================Display==========================
 	display7seg(mux, sel_ope, d1, d2, d3, d4, d5, d6);
-	
 	//====================================================
 	
 

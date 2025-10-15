@@ -17,8 +17,10 @@ module display7seg(
     // -------------------------
 
     // Conectar decodificadores aos fios por display
-    displayunidade(Data, dec_d1[0], dec_d1[1], dec_d1[2], dec_d1[3], dec_d1[4], dec_d1[5], dec_d1[6]);
-    displaydezena(Data, dec_d2[0], dec_d2[1], dec_d2[2], dec_d2[3], dec_d2[4], dec_d2[5], dec_d2[6]);
+    display_decimal({3'b00, Data}, {d4[6], d4[5], d4[4], d4[3], d4[2], d4[1], d4[0],
+	 d3[6], d3[5], d3[4], d3[3], d3[2], d3[1], d3[0],
+	 dec_d2[6], dec_d2[5], dec_d2[4], dec_d2[3], dec_d2[2], dec_d2[1], dec_d2[0],
+	 dec_d1[6], dec_d1[5], dec_d1[4], dec_d1[3], dec_d1[2], dec_d1[1], dec_d1[0]});
 
     display_hexa(Data[0], Data[1], Data[2], Data[3],
                  Data[4], Data[5], Data[6], Data[7],
