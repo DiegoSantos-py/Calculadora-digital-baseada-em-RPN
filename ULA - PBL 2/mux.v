@@ -62,7 +62,6 @@ module mux8bit(
 	
 	and and07(w7, sel[0], sel[1], sel[2], in7);
 
-	
 	or or00(out, w0, w1, w2, w3, w4, w5, w6, w7);
 	
 endmodule

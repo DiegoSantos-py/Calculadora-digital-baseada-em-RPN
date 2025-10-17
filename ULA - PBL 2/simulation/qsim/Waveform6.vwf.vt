@@ -19,48 +19,50 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/11/2025 20:14:27"
+// Generated on "10/15/2025 20:41:44"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          switch_debouncer
+// Verilog Test Bench (with test vectors) for design :                          contador_mod8
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module switch_debouncer_vlg_vec_tst();
+module contador_mod8_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg button_raw;
-reg clk;
+reg en;
+reg reset;
 // wires                                               
-wire button_clean;
+wire out_0;
+wire out_1;
+wire out_2;
 
 // assign statements (if any)                          
-switch_debouncer i1 (
+contador_mod8 i1 (
 // port map - connection between master ports and signals/registers   
-	.button_clean(button_clean),
-	.button_raw(button_raw),
-	.clk(clk)
+	.en(en),
+	.out_0(out_0),
+	.out_1(out_1),
+	.out_2(out_2),
+	.reset(reset)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
 
-// button_raw
+// en
 always
 begin
-	button_raw = 1'b0;
-	button_raw = #250000 1'b1;
-	#250000;
+	en = 1'b0;
+	en = #25000 1'b1;
+	#25000;
 end 
 
-// clk
-always
+// reset
+initial
 begin
-	clk = 1'b0;
-	clk = #10000 1'b1;
-	#10000;
+	reset = 1'b0;
 end 
 endmodule
 

@@ -28,3 +28,16 @@ module register_16bit(in, en, out, reset);
 endmodule
 	
 	
+
+	 
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 

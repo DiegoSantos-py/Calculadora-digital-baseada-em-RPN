@@ -3,328 +3,464 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
-Slack : -19.039
-TNS   : -86.362
+Slack : -23.206
+TNS   : -23.206
+
+Type  : Slow 1200mV 85C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : -8.618
+TNS   : -59.955
+
+Type  : Slow 1200mV 85C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : -8.522
+TNS   : -63.868
+
+Type  : Slow 1200mV 85C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : -8.505
+TNS   : -63.545
+
+Type  : Slow 1200mV 85C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : -8.500
+TNS   : -63.392
+
+Type  : Slow 1200mV 85C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -8.052
+TNS   : -59.570
+
+Type  : Slow 1200mV 85C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -7.815
+TNS   : -57.266
+
+Type  : Slow 1200mV 85C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -7.566
+TNS   : -54.665
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -1.608
-TNS   : -2.916
+Slack : -5.322
+TNS   : -37.997
 
 Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
-Slack : -0.801
-TNS   : -12.043
+Slack : -2.409
+TNS   : -13.649
 
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2|flipflop_inst'
-Slack : -0.618
-TNS   : -0.618
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
+Slack : -0.588
+TNS   : -0.588
 
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : -0.603
-TNS   : -0.603
-
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
 Slack : -0.585
 TNS   : -0.585
 
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : -0.583
-TNS   : -0.583
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : -0.540
+TNS   : -0.540
 
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : -0.583
-TNS   : -0.583
+Type  : Slow 1200mV 85C Model Setup 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
+Slack : -0.539
+TNS   : -0.539
 
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : -0.583
-TNS   : -0.583
-
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : -0.529
-TNS   : -0.529
-
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
 Slack : -0.525
 TNS   : -0.525
 
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : -0.478
-TNS   : -0.478
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : -0.524
+TNS   : -0.524
 
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
-Slack : -0.477
-TNS   : -0.477
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : -0.523
+TNS   : -0.523
 
-Type  : Slow 1200mV 85C Model Setup 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : -0.470
-TNS   : -0.470
-
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : -0.446
-TNS   : -0.446
-
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
-Slack : -0.430
-TNS   : -0.430
-
-Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : -0.410
-TNS   : -0.410
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
+Slack : -0.505
+TNS   : -0.505
 
 Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : -0.368
-TNS   : -0.368
+Slack : -0.505
+TNS   : -0.505
+
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : -0.490
+TNS   : -0.490
+
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : -0.456
+TNS   : -0.456
+
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : -0.441
+TNS   : -0.441
 
 Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : -0.339
-TNS   : -0.339
+Slack : -0.408
+TNS   : -0.408
+
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2|flipflop_inst'
+Slack : -0.404
+TNS   : -0.404
+
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : -0.392
+TNS   : -0.392
 
 Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : -0.204
-TNS   : -0.204
+Slack : -0.360
+TNS   : -0.360
 
-Type  : Slow 1200mV 85C Model Setup 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : -0.161
-TNS   : -0.161
+Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
+Slack : -0.354
+TNS   : -0.354
+
+Type  : Slow 1200mV 85C Model Setup 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : -0.347
+TNS   : -0.347
 
 Type  : Slow 1200mV 85C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
-Slack : 0.166
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : 0.221
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : 0.260
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
-Slack : 0.339
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : 0.420
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
-Slack : 0.425
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : 0.493
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
-Slack : 0.502
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
-Slack : 0.502
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : 0.574
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : 0.577
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : 0.580
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : 0.591
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : 0.620
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2|flipflop_inst'
-Slack : 0.621
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : 0.632
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : 0.659
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : 0.664
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : 0.678
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : 0.793
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : 0.799
+Slack : 0.174
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 1.183
+Slack : -2.968
+TNS   : -17.808
+
+Type  : Slow 1200mV 85C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -0.902
+TNS   : -5.412
+
+Type  : Slow 1200mV 85C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -0.644
+TNS   : -3.864
+
+Type  : Slow 1200mV 85C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -0.397
+TNS   : -2.382
+
+Type  : Slow 1200mV 85C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : 0.071
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
-Slack : 1.191
+Type  : Slow 1200mV 85C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : 0.076
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Recovery 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : -4.395
-TNS   : -4.395
-
-Type  : Slow 1200mV 85C Model Recovery 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : -2.239
-TNS   : -2.239
-
-Type  : Slow 1200mV 85C Model Recovery 'clk'
-Slack : -1.997
-TNS   : -3.863
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : -1.430
-TNS   : -1.430
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : -1.330
-TNS   : -1.330
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : -0.811
-TNS   : -0.811
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : -0.708
-TNS   : -0.708
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : -0.659
-TNS   : -0.659
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : -0.589
-TNS   : -0.589
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : -0.580
-TNS   : -0.580
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : -0.543
-TNS   : -0.543
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : -0.462
-TNS   : -0.462
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : -0.433
-TNS   : -0.433
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : -0.423
-TNS   : -0.423
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
-Slack : -0.415
-TNS   : -0.415
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : -0.327
-TNS   : -0.327
-
-Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : -0.315
-TNS   : -0.315
-
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : 0.470
+Type  : Slow 1200mV 85C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : 0.095
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : 0.526
+Type  : Slow 1200mV 85C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : 0.289
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : 0.577
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
+Slack : 0.348
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2|flipflop_inst'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
+Slack : 0.555
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
+Slack : 0.563
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
+Slack : 0.563
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : 0.566
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
+Slack : 0.570
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
+Slack : 0.578
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
+Slack : 0.580
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
+Slack : 0.580
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
+Slack : 0.581
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
 Slack : 0.582
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : 0.598
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : 0.612
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
 Slack : 0.641
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : 0.648
+Type  : Slow 1200mV 85C Model Hold 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
+Slack : 0.755
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : 0.657
+Type  : Slow 1200mV 85C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : 0.755
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : 0.657
+Type  : Slow 1200mV 85C Model Hold 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
+Slack : 0.901
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : 0.728
+Type  : Slow 1200mV 85C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : -9.502
+TNS   : -57.729
+
+Type  : Slow 1200mV 85C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : -5.448
+TNS   : -45.155
+
+Type  : Slow 1200mV 85C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : -5.394
+TNS   : -49.865
+
+Type  : Slow 1200mV 85C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : -5.389
+TNS   : -49.252
+
+Type  : Slow 1200mV 85C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -4.941
+TNS   : -45.715
+
+Type  : Slow 1200mV 85C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -4.704
+TNS   : -43.163
+
+Type  : Slow 1200mV 85C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -4.455
+TNS   : -41.420
+
+Type  : Slow 1200mV 85C Model Recovery 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : -4.244
+TNS   : -4.244
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -2.505
+TNS   : -25.968
+
+Type  : Slow 1200mV 85C Model Recovery 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
+Slack : -2.318
+TNS   : -2.318
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
+Slack : -1.448
+TNS   : -1.448
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
+Slack : -1.378
+TNS   : -1.378
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : -1.019
+TNS   : -1.019
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
+Slack : -0.890
+TNS   : -0.890
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : -0.717
+TNS   : -0.717
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
+Slack : -0.650
+TNS   : -0.650
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : -0.632
+TNS   : -0.632
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : -0.622
+TNS   : -0.622
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
+Slack : -0.598
+TNS   : -0.598
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : -0.588
+TNS   : -0.588
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : -0.448
+TNS   : -0.448
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
+Slack : -0.368
+TNS   : -0.368
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : -0.329
+TNS   : -0.329
+
+Type  : Slow 1200mV 85C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
+Slack : -0.290
+TNS   : -0.290
+
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
+Slack : 0.452
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : 0.735
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
+Slack : 0.570
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
+Slack : 0.646
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : 0.653
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : 0.753
+Slack : 0.659
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : 0.717
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : 0.726
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : 0.761
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : 0.791
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : 0.948
+Slack : 1.055
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : 1.140
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : 1.510
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Removal 'clk'
-Slack : 1.609
+Slack : 1.526
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : 1.614
+Slack : 1.598
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 1.750
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : 1.781
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : 1.848
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : 2.123
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : 2.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : 2.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : 2.367
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : 2.153
+Slack : 2.426
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : 4.240
+Slack : 4.303
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : 5.349
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -5.806
+TNS   : -18.433
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
 Slack : -1.403
 TNS   : -37.881
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
 Slack : -1.403
-TNS   : -11.224
+TNS   : -14.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : -1.403
+TNS   : -12.627
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
 Slack : -1.403
@@ -335,6 +471,10 @@ Slack : -1.403
 TNS   : -1.403
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
 Slack : -1.403
 TNS   : -1.403
 
@@ -390,341 +530,477 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:d
 Slack : -1.403
 TNS   : -1.403
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
 Slack : -1.403
 TNS   : -1.403
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
 Slack : -1.403
 TNS   : -1.403
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2|flipflop_inst'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2|flipflop_inst'
 Slack : -1.403
 TNS   : -1.403
 
 Type  : Slow 1200mV 0C Model Setup 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
-Slack : -17.507
-TNS   : -79.162
+Slack : -21.254
+TNS   : -21.254
+
+Type  : Slow 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : -8.108
+TNS   : -56.146
+
+Type  : Slow 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : -8.024
+TNS   : -59.723
+
+Type  : Slow 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : -8.007
+TNS   : -59.407
+
+Type  : Slow 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : -7.998
+TNS   : -59.259
+
+Type  : Slow 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -7.583
+TNS   : -55.697
+
+Type  : Slow 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -7.347
+TNS   : -53.453
+
+Type  : Slow 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -7.125
+TNS   : -51.118
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -1.439
-TNS   : -2.616
+Slack : -4.961
+TNS   : -34.887
 
 Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
-Slack : -0.670
-TNS   : -8.950
+Slack : -2.113
+TNS   : -11.324
 
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2|flipflop_inst'
-Slack : -0.533
-TNS   : -0.533
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : -0.504
-TNS   : -0.504
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : -0.502
-TNS   : -0.502
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
 Slack : -0.500
 TNS   : -0.500
 
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : -0.499
-TNS   : -0.499
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : -0.496
-TNS   : -0.496
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : -0.455
-TNS   : -0.455
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : -0.453
-TNS   : -0.453
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
-Slack : -0.415
-TNS   : -0.415
-
-Type  : Slow 1200mV 0C Model Setup 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : -0.410
-TNS   : -0.410
-
 Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : -0.387
-TNS   : -0.387
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : -0.386
-TNS   : -0.386
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
-Slack : -0.372
-TNS   : -0.372
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : -0.344
-TNS   : -0.344
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : -0.314
-TNS   : -0.314
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : -0.276
-TNS   : -0.276
-
-Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : -0.171
-TNS   : -0.171
+Slack : -0.489
+TNS   : -0.489
 
 Type  : Slow 1200mV 0C Model Setup 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : -0.134
-TNS   : -0.134
+Slack : -0.468
+TNS   : -0.468
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : -0.463
+TNS   : -0.463
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
+Slack : -0.452
+TNS   : -0.452
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : -0.450
+TNS   : -0.450
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : -0.449
+TNS   : -0.449
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
+Slack : -0.431
+TNS   : -0.431
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
+Slack : -0.430
+TNS   : -0.430
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : -0.400
+TNS   : -0.400
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : -0.389
+TNS   : -0.389
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : -0.354
+TNS   : -0.354
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : -0.343
+TNS   : -0.343
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
+Slack : -0.342
+TNS   : -0.342
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2|flipflop_inst'
+Slack : -0.309
+TNS   : -0.309
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
+Slack : -0.306
+TNS   : -0.306
+
+Type  : Slow 1200mV 0C Model Setup 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : -0.296
+TNS   : -0.296
+
+Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
+Slack : -0.293
+TNS   : -0.293
 
 Type  : Slow 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
-Slack : 0.242
+Slack : 0.249
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : 0.231
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -2.854
+TNS   : -17.124
+
+Type  : Slow 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -0.856
+TNS   : -5.136
+
+Type  : Slow 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -0.623
+TNS   : -3.738
+
+Type  : Slow 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -0.378
+TNS   : -2.268
+
+Type  : Slow 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : 0.054
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : 0.264
+Type  : Slow 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : 0.064
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : 0.081
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : 0.253
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
-Slack : 0.304
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2|flipflop_inst'
+Slack : 0.359
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
-Slack : 0.392
+Slack : 0.399
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : 0.404
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : 0.440
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : 0.444
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
-Slack : 0.478
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
 Slack : 0.480
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : 0.517
+Slack : 0.493
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : 0.529
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
+Slack : 0.525
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : 0.541
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
+Slack : 0.527
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : 0.552
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2|flipflop_inst'
-Slack : 0.572
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : 0.576
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : 0.588
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
+Slack : 0.530
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : 0.599
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : 0.626
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : 0.629
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : 0.742
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : 0.755
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
-Slack : 1.097
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 1.098
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Recovery 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : -4.114
-TNS   : -4.114
-
-Type  : Slow 1200mV 0C Model Recovery 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : -2.098
-TNS   : -2.098
-
-Type  : Slow 1200mV 0C Model Recovery 'clk'
-Slack : -1.683
-TNS   : -3.261
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : -1.317
-TNS   : -1.317
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : -1.232
-TNS   : -1.232
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : -0.755
-TNS   : -0.755
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : -0.575
-TNS   : -0.575
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : -0.496
-TNS   : -0.496
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : -0.495
-TNS   : -0.495
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : -0.472
-TNS   : -0.472
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : -0.447
-TNS   : -0.447
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : -0.435
-TNS   : -0.435
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : -0.388
-TNS   : -0.388
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : -0.385
-TNS   : -0.385
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
-Slack : -0.377
-TNS   : -0.377
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : -0.308
-TNS   : -0.308
-
-Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : -0.285
-TNS   : -0.285
-
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : 0.425
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : 0.462
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
-Slack : 0.529
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
 Slack : 0.535
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : 0.569
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : 0.538
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : 0.582
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
+Slack : 0.540
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : 0.593
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
+Slack : 0.545
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : 0.620
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : 0.545
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : 0.652
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
+Slack : 0.549
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : 0.559
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
+Slack : 0.561
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : 0.597
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
+Slack : 0.711
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : 0.720
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
+Slack : 0.796
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : -8.848
+TNS   : -53.820
+
+Type  : Slow 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : -5.076
+TNS   : -42.049
+
+Type  : Slow 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : -5.019
+TNS   : -46.449
+
+Type  : Slow 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : -5.010
+TNS   : -45.883
+
+Type  : Slow 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -4.595
+TNS   : -42.575
+
+Type  : Slow 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -4.359
+TNS   : -40.085
+
+Type  : Slow 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -4.137
+TNS   : -38.524
+
+Type  : Slow 1200mV 0C Model Recovery 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : -3.963
+TNS   : -3.963
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -2.250
+TNS   : -23.162
+
+Type  : Slow 1200mV 0C Model Recovery 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
+Slack : -2.168
+TNS   : -2.168
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
+Slack : -1.334
+TNS   : -1.334
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
+Slack : -1.273
+TNS   : -1.273
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : -0.951
+TNS   : -0.951
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
+Slack : -0.831
+TNS   : -0.831
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : -0.587
+TNS   : -0.587
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : -0.563
+TNS   : -0.563
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : -0.547
+TNS   : -0.547
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : -0.483
+TNS   : -0.483
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
+Slack : -0.483
+TNS   : -0.483
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
+Slack : -0.483
+TNS   : -0.483
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : -0.402
+TNS   : -0.402
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
+Slack : -0.339
+TNS   : -0.339
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : -0.301
+TNS   : -0.301
+
+Type  : Slow 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
+Slack : -0.281
+TNS   : -0.281
+
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
+Slack : 0.413
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
+Slack : 0.516
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : 0.573
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
+Slack : 0.607
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
+Slack : 0.622
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : 0.645
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
 Slack : 0.687
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : 0.703
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : 0.712
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : 0.714
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : 0.847
+Slack : 0.939
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : 1.012
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : 1.356
+Slack : 1.362
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : 1.444
+Slack : 1.426
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'clk'
-Slack : 1.586
+Slack : 1.684
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : 1.728
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : 1.786
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : 2.036
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : 2.173
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : 1.942
+Slack : 2.180
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : 2.233
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : 2.241
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : 3.808
+Slack : 3.867
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : 4.786
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -5.806
+TNS   : -18.433
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
 Slack : -1.403
 TNS   : -37.881
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
 Slack : -1.403
-TNS   : -11.224
+TNS   : -14.030
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -1.403
+TNS   : -14.030
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : -1.403
+TNS   : -12.627
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
 Slack : -1.403
@@ -735,6 +1011,10 @@ Slack : -1.403
 TNS   : -1.403
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : -1.403
+TNS   : -1.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
 Slack : -1.403
 TNS   : -1.403
 
@@ -790,341 +1070,477 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:de
 Slack : -1.403
 TNS   : -1.403
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
 Slack : -1.403
 TNS   : -1.403
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
 Slack : -1.403
 TNS   : -1.403
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2|flipflop_inst'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2|flipflop_inst'
 Slack : -1.403
 TNS   : -1.403
 
 Type  : Fast 1200mV 0C Model Setup 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
-Slack : -7.355
-TNS   : -32.036
+Slack : -9.206
+TNS   : -9.206
+
+Type  : Fast 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : -3.170
+TNS   : -22.013
+
+Type  : Fast 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : -3.135
+TNS   : -23.767
+
+Type  : Fast 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : -3.133
+TNS   : -23.749
+
+Type  : Fast 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : -3.131
+TNS   : -23.731
+
+Type  : Fast 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -2.925
+TNS   : -21.877
+
+Type  : Fast 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -2.838
+TNS   : -21.094
+
+Type  : Fast 1200mV 0C Model Setup 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -2.739
+TNS   : -20.203
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.298
-TNS   : -0.536
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : 0.071
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2|flipflop_inst'
-Slack : 0.079
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : 0.094
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : 0.108
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : 0.111
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : 0.118
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : 0.130
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : 0.132
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : 0.133
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : 0.144
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
-Slack : 0.153
-TNS   : 0.000
+Slack : -1.766
+TNS   : -12.863
 
 Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
-Slack : 0.172
-TNS   : 0.000
+Slack : -0.645
+TNS   : -1.528
 
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
-Slack : 0.177
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
+Slack : 0.088
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : 0.181
+Slack : 0.093
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : 0.182
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : 0.124
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : 0.195
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
+Slack : 0.127
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : 0.209
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : 0.131
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : 0.277
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : 0.132
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : 0.307
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
-Slack : 0.634
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : 0.008
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : 0.032
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : 0.104
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
-Slack : 0.137
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
 Slack : 0.140
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
-Slack : 0.147
+Type  : Fast 1200mV 0C Model Setup 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
+Slack : 0.141
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
-Slack : 0.160
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
+Slack : 0.141
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : 0.168
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
+Slack : 0.143
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : 0.179
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : 0.144
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : 0.188
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : 0.161
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : 0.191
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2|flipflop_inst'
+Slack : 0.176
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : 0.192
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : 0.190
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : 0.202
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
+Slack : 0.193
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : 0.203
+Type  : Fast 1200mV 0C Model Setup 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : 0.194
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : 0.207
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
+Slack : 0.195
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : 0.207
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
+Slack : 0.225
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2|flipflop_inst'
-Slack : 0.221
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : 0.246
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : 0.250
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : 0.251
+Type  : Fast 1200mV 0C Model Setup 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
+Slack : 0.639
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.435
+Slack : -1.271
+TNS   : -7.626
+
+Type  : Fast 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -0.379
+TNS   : -2.274
+
+Type  : Fast 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -0.276
+TNS   : -1.656
+
+Type  : Fast 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -0.185
+TNS   : -1.110
+
+Type  : Fast 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : 0.030
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : 0.032
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : 0.034
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : 0.124
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2|flipflop_inst'
+Slack : 0.136
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
+Slack : 0.159
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div7|flipflop_inst'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
+Slack : 0.196
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : 0.225
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
+Slack : 0.230
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
-Slack : 0.447
+Slack : 0.351
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : -4.541
+TNS   : -25.397
+
+Type  : Fast 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : -2.378
+TNS   : -21.117
+
+Type  : Fast 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : -2.374
+TNS   : -21.367
+
+Type  : Fast 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : -2.347
+TNS   : -19.195
+
+Type  : Fast 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -2.168
+TNS   : -19.474
+
+Type  : Fast 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -2.081
+TNS   : -18.477
+
+Type  : Fast 1200mV 0C Model Recovery 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -1.982
+TNS   : -17.836
+
 Type  : Fast 1200mV 0C Model Recovery 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : -1.598
-TNS   : -1.598
+Slack : -1.573
+TNS   : -1.573
 
 Type  : Fast 1200mV 0C Model Recovery 'clk'
-Slack : -0.689
-TNS   : -1.338
+Slack : -1.152
+TNS   : -11.304
 
 Type  : Fast 1200mV 0C Model Recovery 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : -0.624
-TNS   : -0.624
+Slack : -0.701
+TNS   : -0.701
 
 Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
 Slack : -0.292
 TNS   : -0.292
 
 Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : -0.242
-TNS   : -0.242
-
-Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : -0.063
-TNS   : -0.063
-
-Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : -0.033
-TNS   : -0.033
-
-Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : 0.008
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : 0.016
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : 0.018
-TNS   : 0.000
+Slack : -0.258
+TNS   : -0.258
 
 Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : 0.113
+Slack : -0.078
+TNS   : -0.078
+
+Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : -0.052
+TNS   : -0.052
+
+Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : -0.042
+TNS   : -0.042
+
+Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
+Slack : -0.028
+TNS   : -0.028
+
+Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
+Slack : -0.026
+TNS   : -0.026
+
+Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
+Slack : 0.012
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : 0.143
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : 0.163
+Slack : 0.095
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
-Slack : 0.170
+Slack : 0.096
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : 0.171
+Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : 0.137
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : 0.191
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : 0.198
+Slack : 0.193
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : 0.209
+Slack : 0.237
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b1|flipflop_inst'
-Slack : 0.184
+Slack : 0.176
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b0|flipflop_inst'
-Slack : 0.225
+Slack : 0.227
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
+Slack : 0.229
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b2|flipflop_inst'
-Slack : 0.230
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
-Slack : 0.232
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
-Slack : 0.250
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
-Slack : 0.261
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
-Slack : 0.271
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
-Slack : 0.282
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
-Slack : 0.290
+Slack : 0.233
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b2|flipflop_inst'
-Slack : 0.297
+Slack : 0.252
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
-Slack : 0.303
+Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b2|flipflop_inst'
+Slack : 0.279
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b2|flipflop_inst'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b1|flipflop_inst'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div3|d_flipflop:b1|flipflop_inst'
+Slack : 0.332
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div2|d_flipflop:b0|flipflop_inst'
-Slack : 0.408
+Slack : 0.465
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div4|d_flipflop:b0|flipflop_inst'
+Slack : 0.501
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'clk'
-Slack : 0.500
+Slack : 0.565
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b0|flipflop_inst'
-Slack : 0.708
+Slack : 0.703
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div1|d_flipflop:b1|flipflop_inst'
-Slack : 0.760
+Slack : 0.738
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : 0.980
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : 1.003
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : 1.147
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'dividir_5:div_clk|d_flipflop:b0|flipflop_inst'
-Slack : 1.086
+Slack : 1.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : 1.238
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
+Slack : 1.260
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : 1.264
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
-Slack : 2.150
+Slack : 2.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : 2.383
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -5.051
+TNS   : -18.360
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|d_flipflop:stable|flipflop_inst'
 Slack : -1.000
 TNS   : -27.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1|flipflop_inst'
 Slack : -1.000
-TNS   : -8.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2|flipflop_inst'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3|flipflop_inst'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4|flipflop_inst'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5|flipflop_inst'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6|flipflop_inst'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0|flipflop_inst'
+Slack : -1.000
+TNS   : -9.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|d_flipflop:div8|flipflop_inst'
 Slack : -1.000
@@ -1135,6 +1551,10 @@ Slack : -1.000
 TNS   : -1.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dividir_5:div_clk|d_flipflop:b1|flipflop_inst'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'dividir_5:div_clk|d_flipflop:b2|flipflop_inst'
 Slack : -1.000
 TNS   : -1.000
 
@@ -1190,15 +1610,15 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:de
 Slack : -1.000
 TNS   : -1.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b0|flipflop_inst'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0|flipflop_inst'
 Slack : -1.000
 TNS   : -1.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b1|flipflop_inst'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1|flipflop_inst'
 Slack : -1.000
 TNS   : -1.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2|flipflop_inst'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2|flipflop_inst'
 Slack : -1.000
 TNS   : -1.000
 

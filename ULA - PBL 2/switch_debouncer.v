@@ -6,7 +6,7 @@ module switch_debouncer(
 );
     wire clk_out, clk_aux, clk_botao;
 
-    // 1️⃣Gera clocks lentos
+    // gera clocks lentos
     divisor_frequencia div_inst(
         .clk(clk),
         .clk_out(clk_out),
@@ -14,7 +14,7 @@ module switch_debouncer(
         .clk_botao(clk_botao)
     );
 
-    // 2️⃣Sincroniza o botão no clock lento
+    // sincroniza o botão
     wire botao_sync;
     d_flipflop sync1(
         .d(botao_raw),
@@ -23,7 +23,7 @@ module switch_debouncer(
         .q(botao_sync)
     );
 
-    // 3️⃣Saída estável
+    // saída estável
     d_flipflop stable(
         .d(botao_sync),
         .clk(clk_botao),

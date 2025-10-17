@@ -60,7 +60,8 @@ endmodule
 module display_hexa(
     input A0, A1, A2, A3, 
     input B0, B1, B2, B3,
-    output [6:0] d1, d2
+	 input C0, C1, C2, C3,
+    output [6:0] d1, d2, d3
 );
 
     display_hex unidade(
@@ -72,6 +73,11 @@ module display_hexa(
         B0, B1, B2, B3,
         d2[0], d2[1], d2[2], d2[3], d2[4], d2[5], d2[6]
     );
+	 
+	  display_hex centena(
+        C0, C1, C2, C3,
+        d3[0], d3[1], d3[2], d3[3], d3[4], d3[5], d3[6]
+    );	
 
 endmodule
 

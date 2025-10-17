@@ -1,63 +1,53 @@
 |main
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
+A[0] => A[0].IN2
+A[1] => A[1].IN2
+A[2] => A[2].IN2
+A[3] => A[3].IN2
+A[4] => A[4].IN2
+A[5] => A[5].IN2
+A[6] => A[6].IN2
+A[7] => A[7].IN2
 Enable => Enable.IN1
-clk => clk.IN2
-d1[0] << display7seg:comb_11.port2
-d1[1] << display7seg:comb_11.port2
-d1[2] << display7seg:comb_11.port2
-d1[3] << display7seg:comb_11.port2
-d1[4] << display7seg:comb_11.port2
-d1[5] << display7seg:comb_11.port2
-d1[6] << display7seg:comb_11.port2
-d2[0] << display7seg:comb_11.port3
-d2[1] << display7seg:comb_11.port3
-d2[2] << display7seg:comb_11.port3
-d2[3] << display7seg:comb_11.port3
-d2[4] << display7seg:comb_11.port3
-d2[5] << display7seg:comb_11.port3
-d2[6] << display7seg:comb_11.port3
-d3[0] << display7seg:comb_11.port4
-d3[1] << display7seg:comb_11.port4
-d3[2] << display7seg:comb_11.port4
-d3[3] << display7seg:comb_11.port4
-d3[4] << display7seg:comb_11.port4
-d3[5] << display7seg:comb_11.port4
-d3[6] << display7seg:comb_11.port4
-d4[0] << display7seg:comb_11.port5
-d4[1] << display7seg:comb_11.port5
-d4[2] << display7seg:comb_11.port5
-d4[3] << display7seg:comb_11.port5
-d4[4] << display7seg:comb_11.port5
-d4[5] << display7seg:comb_11.port5
-d4[6] << display7seg:comb_11.port5
-d5[0] << display7seg:comb_11.port6
-d5[1] << display7seg:comb_11.port6
-d5[2] << display7seg:comb_11.port6
-d5[3] << display7seg:comb_11.port6
-d5[4] << display7seg:comb_11.port6
-d5[5] << display7seg:comb_11.port6
-d5[6] << display7seg:comb_11.port6
-d6[0] << display7seg:comb_11.port7
-d6[1] << display7seg:comb_11.port7
-d6[2] << display7seg:comb_11.port7
-d6[3] << display7seg:comb_11.port7
-d6[4] << display7seg:comb_11.port7
-d6[5] << display7seg:comb_11.port7
-d6[6] << display7seg:comb_11.port7
-FlagCarryOut << muxFlag:comb_7.port0
-FlagErro << muxFlag:comb_7.port2
-FlagZero << FlagZero:comb_8.port1
-FlagOverflow << muxFlag:comb_7.port1
+clk => clk.IN3
+d1[0] << display7seg:comb_25.port2
+d1[1] << display7seg:comb_25.port2
+d1[2] << display7seg:comb_25.port2
+d1[3] << display7seg:comb_25.port2
+d1[4] << display7seg:comb_25.port2
+d1[5] << display7seg:comb_25.port2
+d1[6] << display7seg:comb_25.port2
+d2[0] << display7seg:comb_25.port3
+d2[1] << display7seg:comb_25.port3
+d2[2] << display7seg:comb_25.port3
+d2[3] << display7seg:comb_25.port3
+d2[4] << display7seg:comb_25.port3
+d2[5] << display7seg:comb_25.port3
+d2[6] << display7seg:comb_25.port3
+d3[0] << display7seg:comb_25.port4
+d3[1] << display7seg:comb_25.port4
+d3[2] << display7seg:comb_25.port4
+d3[3] << display7seg:comb_25.port4
+d3[4] << display7seg:comb_25.port4
+d3[5] << display7seg:comb_25.port4
+d3[6] << display7seg:comb_25.port4
+d4[0] << display7seg:comb_25.port5
+d4[1] << display7seg:comb_25.port5
+d4[2] << display7seg:comb_25.port5
+d4[3] << display7seg:comb_25.port5
+d4[4] << display7seg:comb_25.port5
+d4[5] << display7seg:comb_25.port5
+d4[6] << display7seg:comb_25.port5
+FlagCarryOut << muxFlag:comb_8.port0
+FlagErro << muxFlag:comb_8.port2
+FlagZero << FlagZero:comb_9.port1
+FlagOverflow << muxFlag:comb_8.port1
 sel_ope[0] => sel_ope[0].IN1
 sel_ope[1] => sel_ope[1].IN1
 last_operation => last_operation.IN1
+overflow_result << overflow_result.DB_MAX_OUTPUT_PORT_TYPE
+overflow_muitos_bits << overflow12bits:comb_24.port1
+d6[0] << executar.DB_MAX_OUTPUT_PORT_TYPE
+d6[1] << executar.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|mux_register:mux_last_operation
@@ -328,6 +318,32 @@ q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div5|d_flipflop:b2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6
+clk => clk.IN1
+clk_out <= d_flipflop:b2.q
+
+
+|main|top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|top:comb_3|switch_debouncer:deb|divisor_frequencia:div_inst|dividir_5:div6|d_flipflop:b2
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
@@ -789,14 +805,14 @@ C => f3.IN1
 
 |main|sub8bit:subtrator
 bout <= sub:sub8.port4
-S[0] <= sub:sub1.port0
-S[1] <= sub:sub2.port0
-S[2] <= sub:sub3.port0
-S[3] <= sub:sub4.port0
-S[4] <= sub:sub5.port0
-S[5] <= sub:sub6.port0
-S[6] <= sub:sub7.port0
-S[7] <= sub:sub8.port0
+S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -904,15 +920,561 @@ bin => xor0.IN1
 bout <= or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|main|multiplicador_alternativo:multiplicador
+clk => WideAnd0.IN1
+reset => reset.IN2
+start => WideAnd0.IN2
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|contador_mod255:ctr
+en => en.IN1
+reset => reset.IN8
+out_0 <= d_flipflop:dff0.q
+out_1 <= d_flipflop:dff1.q
+out_2 <= d_flipflop:dff2.q
+out_3 <= d_flipflop:dff3.q
+out_4 <= d_flipflop:dff4.q
+out_5 <= d_flipflop:dff5.q
+out_6 <= d_flipflop:dff6.q
+out_7 <= d_flipflop:dff7.q
+
+
+|main|multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff3
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff4
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff5
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff6
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|contador_mod255:ctr|d_flipflop:dff7
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|comparador_8bit:cmp
+equal <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => xnor_bits[0].IN0
+A[1] => xnor_bits[1].IN0
+A[2] => xnor_bits[2].IN0
+A[3] => xnor_bits[3].IN0
+A[4] => xnor_bits[4].IN0
+A[5] => xnor_bits[5].IN0
+A[6] => xnor_bits[6].IN0
+A[7] => xnor_bits[7].IN0
+B[0] => xnor_bits[0].IN1
+B[1] => xnor_bits[1].IN1
+B[2] => xnor_bits[2].IN1
+B[3] => xnor_bits[3].IN1
+B[4] => xnor_bits[4].IN1
+B[5] => xnor_bits[5].IN1
+B[6] => xnor_bits[6].IN1
+B[7] => xnor_bits[7].IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum
+Cout <= sum:somador16.port0
+S[0] <= sum:somador01.port1
+S[1] <= sum:somador02.port1
+S[2] <= sum:somador03.port1
+S[3] <= sum:somador04.port1
+S[4] <= sum:somador05.port1
+S[5] <= sum:somador06.port1
+S[6] <= sum:somador07.port1
+S[7] <= sum:somador08.port1
+S[8] <= sum:somador09.port1
+S[9] <= sum:somador10.port1
+S[10] <= sum:somador11.port1
+S[11] <= sum:somador12.port1
+S[12] <= sum:somador13.port1
+S[13] <= sum:somador14.port1
+S[14] <= sum:somador15.port1
+S[15] <= sum:somador16.port1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador01
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador02
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador03
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador04
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador05
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador06
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador07
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador08
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador09
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador10
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador11
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador12
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador13
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador14
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador15
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|sum16bit:sum|sum:somador16
+Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+S <= comb.DB_MAX_OUTPUT_PORT_TYPE
+A => f1.IN0
+A => f2.IN0
+B => f1.IN1
+B => f2.IN1
+C => comb.IN1
+C => f3.IN1
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN1
+in[3] => in[3].IN1
+in[4] => in[4].IN1
+in[5] => in[5].IN1
+in[6] => in[6].IN1
+in[7] => in[7].IN1
+in[8] => in[8].IN1
+in[9] => in[9].IN1
+in[10] => in[10].IN1
+in[11] => in[11].IN1
+in[12] => in[12].IN1
+in[13] => in[13].IN1
+in[14] => in[14].IN1
+in[15] => in[15].IN1
+en => en.IN2
+out[0] <= register_8bit:reg1.port2
+out[1] <= register_8bit:reg1.port2
+out[2] <= register_8bit:reg1.port2
+out[3] <= register_8bit:reg1.port2
+out[4] <= register_8bit:reg1.port2
+out[5] <= register_8bit:reg1.port2
+out[6] <= register_8bit:reg1.port2
+out[7] <= register_8bit:reg1.port2
+out[8] <= register_8bit:reg2.port2
+out[9] <= register_8bit:reg2.port2
+out[10] <= register_8bit:reg2.port2
+out[11] <= register_8bit:reg2.port2
+out[12] <= register_8bit:reg2.port2
+out[13] <= register_8bit:reg2.port2
+out[14] <= register_8bit:reg2.port2
+out[15] <= register_8bit:reg2.port2
+reset => reset.IN2
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg1
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN1
+in[3] => in[3].IN1
+in[4] => in[4].IN1
+in[5] => in[5].IN1
+in[6] => in[6].IN1
+in[7] => in[7].IN1
+en => en.IN8
+out[0] <= d_flipflop:dff0.q
+out[1] <= d_flipflop:dff1.q
+out[2] <= d_flipflop:dff2.q
+out[3] <= d_flipflop:dff3.q
+out[4] <= d_flipflop:dff4.q
+out[5] <= d_flipflop:dff5.q
+out[6] <= d_flipflop:dff6.q
+out[7] <= d_flipflop:dff7.q
+reset => reset.IN8
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg1|d_flipflop:dff0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg1|d_flipflop:dff1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg1|d_flipflop:dff2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg1|d_flipflop:dff3
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg1|d_flipflop:dff4
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg1|d_flipflop:dff5
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg1|d_flipflop:dff6
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg1|d_flipflop:dff7
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg2
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN1
+in[3] => in[3].IN1
+in[4] => in[4].IN1
+in[5] => in[5].IN1
+in[6] => in[6].IN1
+in[7] => in[7].IN1
+en => en.IN8
+out[0] <= d_flipflop:dff0.q
+out[1] <= d_flipflop:dff1.q
+out[2] <= d_flipflop:dff2.q
+out[3] <= d_flipflop:dff3.q
+out[4] <= d_flipflop:dff4.q
+out[5] <= d_flipflop:dff5.q
+out[6] <= d_flipflop:dff6.q
+out[7] <= d_flipflop:dff7.q
+reset => reset.IN8
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg2|d_flipflop:dff0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg2|d_flipflop:dff1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg2|d_flipflop:dff2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg2|d_flipflop:dff3
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg2|d_flipflop:dff4
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg2|d_flipflop:dff5
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg2|d_flipflop:dff6
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|multiplicador_alternativo:multiplicador|register_16bit:reg_acc|register_8bit:reg2|d_flipflop:dff7
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |main|divisor8bit:divisor0
-Q[0] <= bout7.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= bout6.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= bout5.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= bout4.DB_MAX_OUTPUT_PORT_TYPE
-Q[4] <= bout3.DB_MAX_OUTPUT_PORT_TYPE
-Q[5] <= bout2.DB_MAX_OUTPUT_PORT_TYPE
-Q[6] <= bout1.DB_MAX_OUTPUT_PORT_TYPE
-Q[7] <= bout0.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN2
 A[1] => A[1].IN2
 A[2] => A[2].IN2
@@ -933,14 +1495,14 @@ B[7] => B[7].IN8
 
 |main|divisor8bit:divisor0|sub8bit:sub0
 bout <= sub:sub8.port4
-S[0] <= sub:sub1.port0
-S[1] <= sub:sub2.port0
-S[2] <= sub:sub3.port0
-S[3] <= sub:sub4.port0
-S[4] <= sub:sub5.port0
-S[5] <= sub:sub6.port0
-S[6] <= sub:sub7.port0
-S[7] <= sub:sub8.port0
+S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1142,14 +1704,14 @@ sel => w1.IN1
 
 |main|divisor8bit:divisor0|sub8bit:sub1
 bout <= sub:sub8.port4
-S[0] <= sub:sub1.port0
-S[1] <= sub:sub2.port0
-S[2] <= sub:sub3.port0
-S[3] <= sub:sub4.port0
-S[4] <= sub:sub5.port0
-S[5] <= sub:sub6.port0
-S[6] <= sub:sub7.port0
-S[7] <= sub:sub8.port0
+S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1351,14 +1913,14 @@ sel => w1.IN1
 
 |main|divisor8bit:divisor0|sub8bit:sub2
 bout <= sub:sub8.port4
-S[0] <= sub:sub1.port0
-S[1] <= sub:sub2.port0
-S[2] <= sub:sub3.port0
-S[3] <= sub:sub4.port0
-S[4] <= sub:sub5.port0
-S[5] <= sub:sub6.port0
-S[6] <= sub:sub7.port0
-S[7] <= sub:sub8.port0
+S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1560,14 +2122,14 @@ sel => w1.IN1
 
 |main|divisor8bit:divisor0|sub8bit:sub3
 bout <= sub:sub8.port4
-S[0] <= sub:sub1.port0
-S[1] <= sub:sub2.port0
-S[2] <= sub:sub3.port0
-S[3] <= sub:sub4.port0
-S[4] <= sub:sub5.port0
-S[5] <= sub:sub6.port0
-S[6] <= sub:sub7.port0
-S[7] <= sub:sub8.port0
+S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1769,14 +2331,14 @@ sel => w1.IN1
 
 |main|divisor8bit:divisor0|sub8bit:sub4
 bout <= sub:sub8.port4
-S[0] <= sub:sub1.port0
-S[1] <= sub:sub2.port0
-S[2] <= sub:sub3.port0
-S[3] <= sub:sub4.port0
-S[4] <= sub:sub5.port0
-S[5] <= sub:sub6.port0
-S[6] <= sub:sub7.port0
-S[7] <= sub:sub8.port0
+S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1978,14 +2540,14 @@ sel => w1.IN1
 
 |main|divisor8bit:divisor0|sub8bit:sub5
 bout <= sub:sub8.port4
-S[0] <= sub:sub1.port0
-S[1] <= sub:sub2.port0
-S[2] <= sub:sub3.port0
-S[3] <= sub:sub4.port0
-S[4] <= sub:sub5.port0
-S[5] <= sub:sub6.port0
-S[6] <= sub:sub7.port0
-S[7] <= sub:sub8.port0
+S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -2187,14 +2749,14 @@ sel => w1.IN1
 
 |main|divisor8bit:divisor0|sub8bit:sub6
 bout <= sub:sub8.port4
-S[0] <= sub:sub1.port0
-S[1] <= sub:sub2.port0
-S[2] <= sub:sub3.port0
-S[3] <= sub:sub4.port0
-S[4] <= sub:sub5.port0
-S[5] <= sub:sub6.port0
-S[6] <= sub:sub7.port0
-S[7] <= sub:sub8.port0
+S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -2396,14 +2958,14 @@ sel => w1.IN1
 
 |main|divisor8bit:divisor0|sub8bit:sub7
 bout <= sub:sub8.port4
-S[0] <= sub:sub1.port0
-S[1] <= sub:sub2.port0
-S[2] <= sub:sub3.port0
-S[3] <= sub:sub4.port0
-S[4] <= sub:sub5.port0
-S[5] <= sub:sub6.port0
-S[6] <= sub:sub7.port0
-S[7] <= sub:sub8.port0
+S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -2703,28 +3265,32 @@ A[6] => S[6].DATAIN
 A[7] => S[7].DATAIN
 
 
-|main|overflow:comb_4
+|main|overflow:comb_5
 Bout => S.DATAIN
 S <= Bout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|FlagErro:comb_5
-B[0] => Nor0.IN0
-B[1] => Nor0.IN1
-B[2] => Nor1.IN0
-B[3] => Nor1.IN1
-O[0] => And1.IN0
-O[1] => And1.IN1
-O[2] => And2.IN1
-S <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+|main|FlagErro:comb_6
+B[0] => Nor_B.IN0
+B[1] => Nor_B.IN1
+B[2] => Nor_B.IN2
+B[3] => Nor_B.IN3
+B[4] => Nor_B.IN4
+B[5] => Nor_B.IN5
+B[6] => Nor_B.IN6
+B[7] => Nor_B.IN7
+O[0] => ~NO_FANOUT~
+O[1] => ~NO_FANOUT~
+O[2] => ~NO_FANOUT~
+S <= Nor_B.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|CarryOut:comb_6
+|main|CarryOut:comb_7
 Cout => S.DATAIN
 S <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|muxFlag:comb_7
+|main|muxFlag:comb_8
 out0 <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 out1 <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
 out2 <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
@@ -2740,9 +3306,12 @@ sel[1] => WideAnd1.IN2
 sel[2] => WideAnd0.IN3
 sel[2] => WideAnd1.IN3
 sel[2] => WideAnd2.IN3
+enable => WideAnd0.IN4
+enable => WideAnd1.IN4
+enable => WideAnd2.IN4
 
 
-|main|FlagZero:comb_8
+|main|FlagZero:comb_9
 S[0] => Nor0.IN0
 S[1] => Nor0.IN1
 S[2] => Nor0.IN2
@@ -2751,6 +3320,11 @@ S[4] => Nor0.IN4
 S[5] => Nor0.IN5
 S[6] => Nor0.IN6
 S[7] => Nor0.IN7
+S[8] => Nor0.IN8
+S[9] => Nor0.IN9
+S[10] => Nor0.IN10
+S[11] => Nor0.IN11
+S[12] => Nor0.IN12
 S1 <= Nor0.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -3441,6 +4015,118 @@ sel[3] => ~NO_FANOUT~
 out <= or00.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|main|overflow8bits:comb_10
+Saida[0] => ~NO_FANOUT~
+Saida[1] => ~NO_FANOUT~
+Saida[2] => ~NO_FANOUT~
+Saida[3] => ~NO_FANOUT~
+Saida[4] => ~NO_FANOUT~
+Saida[5] => ~NO_FANOUT~
+Saida[6] => ~NO_FANOUT~
+Saida[7] => ~NO_FANOUT~
+Saida[8] => or0.IN0
+Saida[9] => or0.IN1
+Saida[10] => or0.IN2
+Saida[11] => or0.IN3
+Saida[12] => or0.IN4
+Saida[13] => or0.IN5
+Saida[14] => or0.IN6
+Saida[15] => or0.IN7
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux_register:comb_11
+out[0] <= mux2x1:comb_3.port0
+out[1] <= mux2x1:comb_4.port0
+out[2] <= mux2x1:comb_5.port0
+out[3] <= mux2x1:comb_6.port0
+out[4] <= mux2x1:comb_7.port0
+out[5] <= mux2x1:comb_8.port0
+out[6] <= mux2x1:comb_9.port0
+out[7] <= mux2x1:comb_10.port0
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+sel => sel.IN8
+
+
+|main|mux_register:comb_11|mux2x1:comb_3
+out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+in0 => w1.IN0
+in1 => w2.IN0
+sel => w2.IN1
+sel => w1.IN1
+
+
+|main|mux_register:comb_11|mux2x1:comb_4
+out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+in0 => w1.IN0
+in1 => w2.IN0
+sel => w2.IN1
+sel => w1.IN1
+
+
+|main|mux_register:comb_11|mux2x1:comb_5
+out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+in0 => w1.IN0
+in1 => w2.IN0
+sel => w2.IN1
+sel => w1.IN1
+
+
+|main|mux_register:comb_11|mux2x1:comb_6
+out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+in0 => w1.IN0
+in1 => w2.IN0
+sel => w2.IN1
+sel => w1.IN1
+
+
+|main|mux_register:comb_11|mux2x1:comb_7
+out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+in0 => w1.IN0
+in1 => w2.IN0
+sel => w2.IN1
+sel => w1.IN1
+
+
+|main|mux_register:comb_11|mux2x1:comb_8
+out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+in0 => w1.IN0
+in1 => w2.IN0
+sel => w2.IN1
+sel => w1.IN1
+
+
+|main|mux_register:comb_11|mux2x1:comb_9
+out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+in0 => w1.IN0
+in1 => w2.IN0
+sel => w2.IN1
+sel => w1.IN1
+
+
+|main|mux_register:comb_11|mux2x1:comb_10
+out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+in0 => w1.IN0
+in1 => w2.IN0
+sel => w2.IN1
+sel => w1.IN1
+
+
 |main|dividir_5:div_clk
 clk => clk.IN1
 clk_out <= d_flipflop:b2.q
@@ -3467,7 +4153,7 @@ reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|register_8bit:comb_10
+|main|register_8bit:comb_13
 in[0] => in[0].IN1
 in[1] => in[1].IN1
 in[2] => in[2].IN1
@@ -3488,63 +4174,83 @@ out[7] <= d_flipflop:dff7.q
 reset => reset.IN8
 
 
-|main|register_8bit:comb_10|d_flipflop:dff0
+|main|register_8bit:comb_13|d_flipflop:dff0
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|register_8bit:comb_10|d_flipflop:dff1
+|main|register_8bit:comb_13|d_flipflop:dff1
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|register_8bit:comb_10|d_flipflop:dff2
+|main|register_8bit:comb_13|d_flipflop:dff2
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|register_8bit:comb_10|d_flipflop:dff3
+|main|register_8bit:comb_13|d_flipflop:dff3
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|register_8bit:comb_10|d_flipflop:dff4
+|main|register_8bit:comb_13|d_flipflop:dff4
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|register_8bit:comb_10|d_flipflop:dff5
+|main|register_8bit:comb_13|d_flipflop:dff5
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|register_8bit:comb_10|d_flipflop:dff6
+|main|register_8bit:comb_13|d_flipflop:dff6
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|register_8bit:comb_10|d_flipflop:dff7
+|main|register_8bit:comb_13|d_flipflop:dff7
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11
+|main|overflow12bits:comb_24
+Saida[0] => ~NO_FANOUT~
+Saida[1] => ~NO_FANOUT~
+Saida[2] => ~NO_FANOUT~
+Saida[3] => ~NO_FANOUT~
+Saida[4] => ~NO_FANOUT~
+Saida[5] => ~NO_FANOUT~
+Saida[6] => ~NO_FANOUT~
+Saida[7] => ~NO_FANOUT~
+Saida[8] => ~NO_FANOUT~
+Saida[9] => ~NO_FANOUT~
+Saida[10] => ~NO_FANOUT~
+Saida[11] => ~NO_FANOUT~
+Saida[12] => or0.IN0
+Saida[13] => or0.IN1
+Saida[14] => or0.IN2
+Saida[15] => or0.IN3
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|display7seg:comb_25
 Data[0] => Data[0].IN3
 Data[1] => Data[1].IN3
 Data[2] => Data[2].IN3
@@ -3553,10 +4259,10 @@ Data[4] => Data[4].IN3
 Data[5] => Data[5].IN3
 Data[6] => Data[6].IN3
 Data[7] => Data[7].IN3
-Data[8] => Data[8].IN2
-Data[9] => Data[9].IN2
-Data[10] => Data[10].IN2
-Data[11] => Data[11].IN2
+Data[8] => Data[8].IN3
+Data[9] => Data[9].IN3
+Data[10] => Data[10].IN3
+Data[11] => Data[11].IN3
 Data[12] => Data[12].IN2
 Data[13] => Data[13].IN2
 Data[14] => Data[14].IN2
@@ -3581,37 +4287,23 @@ d2[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
 d2[4] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
 d2[5] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
 d2[6] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
-d3[0] <= display_decimal:comb_3.port1
-d3[1] <= display_decimal:comb_3.port1
-d3[2] <= display_decimal:comb_3.port1
-d3[3] <= display_decimal:comb_3.port1
-d3[4] <= display_decimal:comb_3.port1
-d3[5] <= display_decimal:comb_3.port1
-d3[6] <= display_decimal:comb_3.port1
-d4[0] <= display_decimal:comb_3.port1
-d4[1] <= display_decimal:comb_3.port1
-d4[2] <= display_decimal:comb_3.port1
-d4[3] <= display_decimal:comb_3.port1
-d4[4] <= display_decimal:comb_3.port1
-d4[5] <= display_decimal:comb_3.port1
-d4[6] <= display_decimal:comb_3.port1
-d5[0] <= <GND>
-d5[1] <= <GND>
-d5[2] <= <GND>
-d5[3] <= <GND>
-d5[4] <= <GND>
-d5[5] <= <GND>
-d5[6] <= <GND>
-d6[0] <= <GND>
-d6[1] <= <GND>
-d6[2] <= <GND>
-d6[3] <= <GND>
-d6[4] <= <GND>
-d6[5] <= <GND>
-d6[6] <= <GND>
+d3[0] <= WideOr14.DB_MAX_OUTPUT_PORT_TYPE
+d3[1] <= WideOr15.DB_MAX_OUTPUT_PORT_TYPE
+d3[2] <= WideOr16.DB_MAX_OUTPUT_PORT_TYPE
+d3[3] <= WideOr17.DB_MAX_OUTPUT_PORT_TYPE
+d3[4] <= WideOr18.DB_MAX_OUTPUT_PORT_TYPE
+d3[5] <= WideOr19.DB_MAX_OUTPUT_PORT_TYPE
+d3[6] <= WideOr20.DB_MAX_OUTPUT_PORT_TYPE
+d4[0] <= WideOr21.DB_MAX_OUTPUT_PORT_TYPE
+d4[1] <= WideOr22.DB_MAX_OUTPUT_PORT_TYPE
+d4[2] <= WideOr23.DB_MAX_OUTPUT_PORT_TYPE
+d4[3] <= WideOr24.DB_MAX_OUTPUT_PORT_TYPE
+d4[4] <= WideOr25.DB_MAX_OUTPUT_PORT_TYPE
+d4[5] <= WideOr26.DB_MAX_OUTPUT_PORT_TYPE
+d4[6] <= WideOr27.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -3655,7 +4347,7 @@ out[26] <= decoder_decimal:comb_6.port9
 out[27] <= decoder_decimal:comb_6.port10
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -3666,7 +4358,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -3675,7 +4367,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -3692,7 +4384,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3703,7 +4395,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3714,7 +4406,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3725,7 +4417,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3736,7 +4428,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3744,7 +4436,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3752,7 +4444,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3760,7 +4452,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db001|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db001|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3768,7 +4460,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -3779,7 +4471,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -3788,7 +4480,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -3805,7 +4497,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3816,7 +4508,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3827,7 +4519,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3838,7 +4530,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3849,7 +4541,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3857,7 +4549,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3865,7 +4557,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3873,7 +4565,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3881,7 +4573,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -3892,7 +4584,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -3901,7 +4593,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -3918,7 +4610,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3929,7 +4621,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3940,7 +4632,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3951,7 +4643,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -3962,7 +4654,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3970,7 +4662,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3978,7 +4670,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3986,7 +4678,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -3994,7 +4686,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -4005,7 +4697,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -4014,7 +4706,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -4031,7 +4723,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4042,7 +4734,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4053,7 +4745,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4064,7 +4756,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4075,7 +4767,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4083,7 +4775,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4091,7 +4783,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4099,7 +4791,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4107,7 +4799,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -4118,7 +4810,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -4127,7 +4819,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -4144,7 +4836,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4155,7 +4847,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4166,7 +4858,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4177,7 +4869,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4188,7 +4880,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4196,7 +4888,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4204,7 +4896,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4212,7 +4904,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db005|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db005|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4220,7 +4912,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -4231,7 +4923,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -4240,7 +4932,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -4257,7 +4949,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4268,7 +4960,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4279,7 +4971,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4290,7 +4982,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4301,7 +4993,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4309,7 +5001,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4317,7 +5009,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4325,7 +5017,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db006|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db006|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4333,7 +5025,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -4344,7 +5036,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -4353,7 +5045,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -4370,7 +5062,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4381,7 +5073,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4392,7 +5084,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4403,7 +5095,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4414,7 +5106,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4422,7 +5114,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4430,7 +5122,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4438,7 +5130,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db007|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db007|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4446,7 +5138,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -4457,7 +5149,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -4466,7 +5158,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -4483,7 +5175,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4494,7 +5186,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4505,7 +5197,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4516,7 +5208,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4527,7 +5219,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4535,7 +5227,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4543,7 +5235,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4551,7 +5243,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db008|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db008|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4559,7 +5251,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -4570,7 +5262,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -4579,7 +5271,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -4596,7 +5288,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4607,7 +5299,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4618,7 +5310,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4629,7 +5321,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4640,7 +5332,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4648,7 +5340,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4656,7 +5348,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4664,7 +5356,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db009|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db009|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4672,7 +5364,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -4683,7 +5375,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -4692,7 +5384,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -4709,7 +5401,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4720,7 +5412,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4731,7 +5423,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4742,7 +5434,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4753,7 +5445,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4761,7 +5453,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4769,7 +5461,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4777,7 +5469,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0010|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0010|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4785,7 +5477,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -4796,7 +5488,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -4805,7 +5497,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -4822,7 +5514,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4833,7 +5525,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4844,7 +5536,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4855,7 +5547,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4866,7 +5558,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4874,7 +5566,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4882,7 +5574,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4890,7 +5582,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0011|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0011|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4898,7 +5590,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -4909,7 +5601,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -4918,7 +5610,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -4935,7 +5627,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4946,7 +5638,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4957,7 +5649,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4968,7 +5660,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -4979,7 +5671,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4987,7 +5679,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -4995,7 +5687,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5003,7 +5695,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db0012|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db0012|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5011,7 +5703,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -5022,7 +5714,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -5031,7 +5723,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -5048,7 +5740,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5059,7 +5751,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5070,7 +5762,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5081,7 +5773,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5092,7 +5784,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5100,7 +5792,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5108,7 +5800,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5116,7 +5808,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_1|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_1|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5124,7 +5816,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -5135,7 +5827,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -5144,7 +5836,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -5161,7 +5853,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5172,7 +5864,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5183,7 +5875,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5194,7 +5886,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5205,7 +5897,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5213,7 +5905,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5221,7 +5913,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5229,7 +5921,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_2|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_2|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5237,7 +5929,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -5248,7 +5940,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -5257,7 +5949,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -5274,7 +5966,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5285,7 +5977,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5296,7 +5988,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5307,7 +5999,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5318,7 +6010,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5326,7 +6018,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5334,7 +6026,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5342,7 +6034,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_3|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_3|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5350,7 +6042,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -5361,7 +6053,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -5370,7 +6062,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -5387,7 +6079,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5398,7 +6090,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5409,7 +6101,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5420,7 +6112,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5431,7 +6123,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5439,7 +6131,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5447,7 +6139,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5455,7 +6147,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_4|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_4|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5463,7 +6155,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -5474,7 +6166,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -5483,7 +6175,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -5500,7 +6192,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5511,7 +6203,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5522,7 +6214,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5533,7 +6225,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5544,7 +6236,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5552,7 +6244,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5560,7 +6252,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5568,7 +6260,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_5|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_5|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5576,7 +6268,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -5587,7 +6279,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -5596,7 +6288,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -5613,7 +6305,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5624,7 +6316,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5635,7 +6327,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5646,7 +6338,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5657,7 +6349,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5665,7 +6357,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5673,7 +6365,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5681,7 +6373,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_6|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_6|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5689,7 +6381,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -5700,7 +6392,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -5709,7 +6401,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -5726,7 +6418,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5737,7 +6429,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5748,7 +6440,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5759,7 +6451,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5770,7 +6462,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5778,7 +6470,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5786,7 +6478,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5794,7 +6486,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_7|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_7|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5802,7 +6494,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -5813,7 +6505,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -5822,7 +6514,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -5839,7 +6531,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5850,7 +6542,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5861,7 +6553,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5872,7 +6564,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5883,7 +6575,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5891,7 +6583,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5899,7 +6591,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5907,7 +6599,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_8|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_8|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -5915,7 +6607,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -5926,7 +6618,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -5935,7 +6627,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -5952,7 +6644,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5963,7 +6655,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5974,7 +6666,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5985,7 +6677,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -5996,7 +6688,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6004,7 +6696,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6012,7 +6704,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6020,7 +6712,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_9|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_9|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6028,7 +6720,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -6039,7 +6731,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -6048,7 +6740,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -6065,7 +6757,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6076,7 +6768,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6087,7 +6779,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6098,7 +6790,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6109,7 +6801,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6117,7 +6809,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6125,7 +6817,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6133,7 +6825,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_10|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_10|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6141,7 +6833,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -6152,7 +6844,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -6161,7 +6853,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -6178,7 +6870,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6189,7 +6881,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6200,7 +6892,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6211,7 +6903,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6222,7 +6914,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6230,7 +6922,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6238,7 +6930,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6246,7 +6938,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db002_11|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db002_11|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6254,7 +6946,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -6265,7 +6957,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -6274,7 +6966,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -6291,7 +6983,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6302,7 +6994,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6313,7 +7005,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6324,7 +7016,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6335,7 +7027,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6343,7 +7035,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6351,7 +7043,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6359,7 +7051,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_1|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_1|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6367,7 +7059,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -6378,7 +7070,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -6387,7 +7079,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -6404,7 +7096,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6415,7 +7107,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6426,7 +7118,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6437,7 +7129,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6448,7 +7140,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6456,7 +7148,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6464,7 +7156,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6472,7 +7164,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_2|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_2|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6480,7 +7172,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -6491,7 +7183,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -6500,7 +7192,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -6517,7 +7209,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6528,7 +7220,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6539,7 +7231,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6550,7 +7242,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6561,7 +7253,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6569,7 +7261,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6577,7 +7269,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6585,7 +7277,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_3|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_3|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6593,7 +7285,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -6604,7 +7296,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -6613,7 +7305,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -6630,7 +7322,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6641,7 +7333,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6652,7 +7344,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6663,7 +7355,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6674,7 +7366,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6682,7 +7374,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6690,7 +7382,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6698,7 +7390,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_4|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_4|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6706,7 +7398,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -6717,7 +7409,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -6726,7 +7418,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -6743,7 +7435,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6754,7 +7446,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6765,7 +7457,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6776,7 +7468,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6787,7 +7479,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6795,7 +7487,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6803,7 +7495,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6811,7 +7503,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_5|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_5|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6819,7 +7511,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -6830,7 +7522,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -6839,7 +7531,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -6856,7 +7548,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6867,7 +7559,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6878,7 +7570,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6889,7 +7581,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6900,7 +7592,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6908,7 +7600,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6916,7 +7608,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6924,7 +7616,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_6|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_6|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -6932,7 +7624,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -6943,7 +7635,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -6952,7 +7644,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -6969,7 +7661,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6980,7 +7672,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -6991,7 +7683,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7002,7 +7694,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7013,7 +7705,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7021,7 +7713,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7029,7 +7721,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7037,7 +7729,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_7|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_7|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7045,7 +7737,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -7056,7 +7748,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -7065,7 +7757,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -7082,7 +7774,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7093,7 +7785,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7104,7 +7796,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7115,7 +7807,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7126,7 +7818,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7134,7 +7826,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7142,7 +7834,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7150,7 +7842,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_8|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_8|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7158,7 +7850,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -7169,7 +7861,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -7178,7 +7870,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -7195,7 +7887,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7206,7 +7898,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7217,7 +7909,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7228,7 +7920,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7239,7 +7931,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7247,7 +7939,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7255,7 +7947,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7263,7 +7955,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db003_9|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db003_9|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7271,7 +7963,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -7282,7 +7974,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -7291,7 +7983,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -7308,7 +8000,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7319,7 +8011,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7330,7 +8022,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7341,7 +8033,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7352,7 +8044,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7360,7 +8052,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7368,7 +8060,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7376,7 +8068,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_1|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_1|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7384,7 +8076,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -7395,7 +8087,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -7404,7 +8096,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -7421,7 +8113,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7432,7 +8124,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7443,7 +8135,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7454,7 +8146,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7465,7 +8157,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7473,7 +8165,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7481,7 +8173,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7489,7 +8181,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_2|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_2|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7497,7 +8189,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -7508,7 +8200,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -7517,7 +8209,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -7534,7 +8226,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7545,7 +8237,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7556,7 +8248,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7567,7 +8259,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7578,7 +8270,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7586,7 +8278,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7594,7 +8286,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7602,7 +8294,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_3|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_3|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7610,7 +8302,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -7621,7 +8313,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -7630,7 +8322,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -7647,7 +8339,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7658,7 +8350,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7669,7 +8361,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7680,7 +8372,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7691,7 +8383,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7699,7 +8391,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7707,7 +8399,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7715,7 +8407,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_4|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_4|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7723,7 +8415,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -7734,7 +8426,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -7743,7 +8435,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -7760,7 +8452,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7771,7 +8463,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7782,7 +8474,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7793,7 +8485,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7804,7 +8496,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7812,7 +8504,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7820,7 +8512,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7828,7 +8520,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_5|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_5|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7836,7 +8528,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6
 A[0] => A[0].IN3
 A[1] => A[1].IN3
 A[2] => A[2].IN3
@@ -7847,7 +8539,7 @@ out[2] <= mux2x1:comb_7.port0
 out[3] <= mux2x1:comb_8.port0
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|eh_maior5:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|eh_maior5:comb_3
 A => w1.IN0
 B => w2.IN0
 C => w1.IN1
@@ -7856,7 +8548,7 @@ D => WideOr0.IN2
 out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4
 Cout <= sum:somador4.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -7873,7 +8565,7 @@ B[3] => B[3].IN1
 C => C.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4|sum:somador1
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7884,7 +8576,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4|sum:somador2
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7895,7 +8587,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4|sum:somador3
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7906,7 +8598,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4|sum:somador4
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|sum4bit:comb_4|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -7917,7 +8609,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|mux2x1:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|mux2x1:comb_5
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7925,7 +8617,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|mux2x1:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|mux2x1:comb_6
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7933,7 +8625,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|mux2x1:comb_7
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|mux2x1:comb_7
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7941,7 +8633,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|double_dabble:db004_6|mux2x1:comb_8
+|main|display7seg:comb_25|display_decimal:comb_3|double_dabble:db004_6|mux2x1:comb_8
 out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 in0 => w1.IN0
 in1 => w2.IN0
@@ -7949,7 +8641,7 @@ sel => w2.IN1
 sel => w1.IN1
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|decoder_decimal:comb_3
+|main|display7seg:comb_25|display_decimal:comb_3|decoder_decimal:comb_3
 A => a1.IN0
 A => a2.IN0
 A => a6.IN0
@@ -8007,7 +8699,7 @@ f <= o5.DB_MAX_OUTPUT_PORT_TYPE
 g <= o6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|decoder_decimal:comb_4
+|main|display7seg:comb_25|display_decimal:comb_3|decoder_decimal:comb_4
 A => a1.IN0
 A => a2.IN0
 A => a6.IN0
@@ -8065,7 +8757,7 @@ f <= o5.DB_MAX_OUTPUT_PORT_TYPE
 g <= o6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|decoder_decimal:comb_5
+|main|display7seg:comb_25|display_decimal:comb_3|decoder_decimal:comb_5
 A => a1.IN0
 A => a2.IN0
 A => a6.IN0
@@ -8123,7 +8815,7 @@ f <= o5.DB_MAX_OUTPUT_PORT_TYPE
 g <= o6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_decimal:comb_3|decoder_decimal:comb_6
+|main|display7seg:comb_25|display_decimal:comb_3|decoder_decimal:comb_6
 A => a1.IN0
 A => a2.IN0
 A => a6.IN0
@@ -8181,7 +8873,7 @@ f <= o5.DB_MAX_OUTPUT_PORT_TYPE
 g <= o6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_hexa:comb_4
+|main|display7seg:comb_25|display_hexa:comb_4
 A0 => A0.IN1
 A1 => A1.IN1
 A2 => A2.IN1
@@ -8190,6 +8882,10 @@ B0 => B0.IN1
 B1 => B1.IN1
 B2 => B2.IN1
 B3 => B3.IN1
+C0 => C0.IN1
+C1 => C1.IN1
+C2 => C2.IN1
+C3 => C3.IN1
 d1[0] <= display_hex:unidade.port4
 d1[1] <= display_hex:unidade.port5
 d1[2] <= display_hex:unidade.port6
@@ -8204,9 +8900,16 @@ d2[3] <= display_hex:dezena.port7
 d2[4] <= display_hex:dezena.port8
 d2[5] <= display_hex:dezena.port9
 d2[6] <= display_hex:dezena.port10
+d3[0] <= display_hex:centena.port4
+d3[1] <= display_hex:centena.port5
+d3[2] <= display_hex:centena.port6
+d3[3] <= display_hex:centena.port7
+d3[4] <= display_hex:centena.port8
+d3[5] <= display_hex:centena.port9
+d3[6] <= display_hex:centena.port10
 
 
-|main|display7seg:comb_11|display_hexa:comb_4|display_hex:unidade
+|main|display7seg:comb_25|display_hexa:comb_4|display_hex:unidade
 b0 => WideAnd0.IN0
 b0 => WideAnd2.IN0
 b0 => WideAnd3.IN0
@@ -8302,7 +9005,7 @@ f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_hexa:comb_4|display_hex:dezena
+|main|display7seg:comb_25|display_hexa:comb_4|display_hex:dezena
 b0 => WideAnd0.IN0
 b0 => WideAnd2.IN0
 b0 => WideAnd3.IN0
@@ -8398,7 +9101,103 @@ f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_octal:comb_5
+|main|display7seg:comb_25|display_hexa:comb_4|display_hex:centena
+b0 => WideAnd0.IN0
+b0 => WideAnd2.IN0
+b0 => WideAnd3.IN0
+b0 => WideAnd4.IN0
+b0 => WideAnd6.IN0
+b0 => WideAnd11.IN0
+b0 => WideAnd13.IN0
+b0 => w[15].IN0
+b0 => WideAnd15.IN0
+b0 => WideAnd17.IN0
+b0 => WideAnd19.IN0
+b0 => WideAnd20.IN0
+b0 => WideAnd22.IN0
+b0 => WideAnd1.IN0
+b0 => WideAnd5.IN0
+b0 => WideAnd7.IN0
+b0 => WideAnd8.IN0
+b0 => WideAnd9.IN0
+b0 => WideAnd12.IN0
+b0 => WideAnd14.IN0
+b0 => WideAnd23.IN0
+b1 => WideAnd2.IN1
+b1 => WideAnd5.IN1
+b1 => WideAnd6.IN1
+b1 => WideAnd8.IN1
+b1 => WideAnd10.IN0
+b1 => WideAnd13.IN1
+b1 => WideAnd14.IN1
+b1 => WideAnd18.IN0
+b1 => WideAnd19.IN1
+b1 => WideAnd22.IN1
+b1 => WideAnd0.IN1
+b1 => WideAnd1.IN1
+b1 => WideAnd3.IN1
+b1 => WideAnd4.IN1
+b1 => WideAnd11.IN1
+b1 => WideAnd12.IN1
+b1 => WideAnd15.IN1
+b1 => WideAnd16.IN0
+b1 => WideAnd20.IN1
+b1 => WideAnd21.IN0
+b1 => WideAnd23.IN1
+b2 => WideAnd1.IN2
+b2 => WideAnd3.IN2
+b2 => WideAnd4.IN2
+b2 => WideAnd5.IN2
+b2 => WideAnd7.IN1
+b2 => WideAnd9.IN1
+b2 => WideAnd10.IN1
+b2 => WideAnd12.IN2
+b2 => WideAnd13.IN2
+b2 => WideAnd16.IN1
+b2 => WideAnd20.IN2
+b2 => WideAnd22.IN2
+b2 => WideAnd23.IN2
+b2 => WideAnd0.IN2
+b2 => WideAnd2.IN2
+b2 => WideAnd8.IN2
+b2 => WideAnd11.IN2
+b2 => WideAnd14.IN2
+b2 => WideAnd15.IN2
+b2 => WideAnd17.IN1
+b2 => WideAnd18.IN1
+b2 => WideAnd21.IN1
+b3 => WideAnd2.IN3
+b3 => WideAnd3.IN3
+b3 => WideAnd6.IN2
+b3 => WideAnd7.IN2
+b3 => WideAnd9.IN2
+b3 => WideAnd10.IN2
+b3 => WideAnd14.IN3
+b3 => WideAnd20.IN3
+b3 => WideAnd23.IN3
+b3 => WideAnd0.IN3
+b3 => WideAnd1.IN3
+b3 => WideAnd4.IN3
+b3 => WideAnd8.IN3
+b3 => WideAnd11.IN3
+b3 => WideAnd12.IN3
+b3 => w[15].IN1
+b3 => WideAnd16.IN2
+b3 => WideAnd17.IN2
+b3 => WideAnd18.IN2
+b3 => WideAnd19.IN2
+b3 => WideAnd21.IN2
+b3 => WideAnd22.IN3
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|display7seg:comb_25|display_octal:comb_5
 A0 => A0.IN1
 A1 => A1.IN1
 A2 => A2.IN1
@@ -8411,12 +9210,12 @@ C2 => C2.IN1
 D0 => D0.IN1
 D1 => D1.IN1
 D2 => D2.IN1
-E0 => E0.IN1
-E1 => E1.IN1
-E2 => E2.IN1
-F0 => F0.IN1
-F1 => F1.IN1
-F2 => F2.IN1
+E0 => ~NO_FANOUT~
+E1 => ~NO_FANOUT~
+E2 => ~NO_FANOUT~
+F0 => ~NO_FANOUT~
+F1 => ~NO_FANOUT~
+F2 => ~NO_FANOUT~
 d1[0] <= d_octal:unidade.port3
 d1[1] <= d_octal:unidade.port4
 d1[2] <= d_octal:unidade.port5
@@ -8445,23 +9244,9 @@ d4[3] <= d_octal:milhar.port6
 d4[4] <= d_octal:milhar.port7
 d4[5] <= d_octal:milhar.port8
 d4[6] <= d_octal:milhar.port9
-d5[0] <= d_octal:unidade_milhar.port3
-d5[1] <= d_octal:unidade_milhar.port4
-d5[2] <= d_octal:unidade_milhar.port5
-d5[3] <= d_octal:unidade_milhar.port6
-d5[4] <= d_octal:unidade_milhar.port7
-d5[5] <= d_octal:unidade_milhar.port8
-d5[6] <= d_octal:unidade_milhar.port9
-d6[0] <= d_octal:dezena_milhar.port3
-d6[1] <= d_octal:dezena_milhar.port4
-d6[2] <= d_octal:dezena_milhar.port5
-d6[3] <= d_octal:dezena_milhar.port6
-d6[4] <= d_octal:dezena_milhar.port7
-d6[5] <= d_octal:dezena_milhar.port8
-d6[6] <= d_octal:dezena_milhar.port9
 
 
-|main|display7seg:comb_11|display_octal:comb_5|d_octal:unidade
+|main|display7seg:comb_25|display_octal:comb_5|d_octal:unidade
 A => AxorC.IN0
 A => AxorB.IN0
 A => WideAnd1.IN0
@@ -8497,7 +9282,7 @@ f <= comb.DB_MAX_OUTPUT_PORT_TYPE
 g <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_octal:comb_5|d_octal:dezena
+|main|display7seg:comb_25|display_octal:comb_5|d_octal:dezena
 A => AxorC.IN0
 A => AxorB.IN0
 A => WideAnd1.IN0
@@ -8533,7 +9318,7 @@ f <= comb.DB_MAX_OUTPUT_PORT_TYPE
 g <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_octal:comb_5|d_octal:centena
+|main|display7seg:comb_25|display_octal:comb_5|d_octal:centena
 A => AxorC.IN0
 A => AxorB.IN0
 A => WideAnd1.IN0
@@ -8569,79 +9354,7 @@ f <= comb.DB_MAX_OUTPUT_PORT_TYPE
 g <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|display7seg:comb_11|display_octal:comb_5|d_octal:milhar
-A => AxorC.IN0
-A => AxorB.IN0
-A => WideAnd1.IN0
-A => comb.IN1
-A => term_fa.IN0
-A => term_fc.IN0
-A => WideAnd2.IN0
-A => WideAnd0.IN0
-B => AxorB.IN1
-B => WideAnd0.IN1
-B => WideAnd1.IN1
-B => term_fa.IN1
-B => term_fc.IN1
-B => WideAnd2.IN1
-B => comb.IN1
-B => term_d1.IN1
-B => term_e1.IN0
-B => term_g1.IN0
-C => AxorC.IN1
-C => comb.IN1
-C => WideAnd1.IN2
-C => term_e1.IN1
-C => WideAnd2.IN2
-C => WideAnd0.IN2
-C => term_fb.IN1
-C => term_g1.IN1
-a <= comb.DB_MAX_OUTPUT_PORT_TYPE
-b <= comb.DB_MAX_OUTPUT_PORT_TYPE
-c <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-d <= comb.DB_MAX_OUTPUT_PORT_TYPE
-e <= comb.DB_MAX_OUTPUT_PORT_TYPE
-f <= comb.DB_MAX_OUTPUT_PORT_TYPE
-g <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|display7seg:comb_11|display_octal:comb_5|d_octal:unidade_milhar
-A => AxorC.IN0
-A => AxorB.IN0
-A => WideAnd1.IN0
-A => comb.IN1
-A => term_fa.IN0
-A => term_fc.IN0
-A => WideAnd2.IN0
-A => WideAnd0.IN0
-B => AxorB.IN1
-B => WideAnd0.IN1
-B => WideAnd1.IN1
-B => term_fa.IN1
-B => term_fc.IN1
-B => WideAnd2.IN1
-B => comb.IN1
-B => term_d1.IN1
-B => term_e1.IN0
-B => term_g1.IN0
-C => AxorC.IN1
-C => comb.IN1
-C => WideAnd1.IN2
-C => term_e1.IN1
-C => WideAnd2.IN2
-C => WideAnd0.IN2
-C => term_fb.IN1
-C => term_g1.IN1
-a <= comb.DB_MAX_OUTPUT_PORT_TYPE
-b <= comb.DB_MAX_OUTPUT_PORT_TYPE
-c <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
-d <= comb.DB_MAX_OUTPUT_PORT_TYPE
-e <= comb.DB_MAX_OUTPUT_PORT_TYPE
-f <= comb.DB_MAX_OUTPUT_PORT_TYPE
-g <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|display7seg:comb_11|display_octal:comb_5|d_octal:dezena_milhar
+|main|display7seg:comb_25|display_octal:comb_5|d_octal:milhar
 A => AxorC.IN0
 A => AxorB.IN0
 A => WideAnd1.IN0

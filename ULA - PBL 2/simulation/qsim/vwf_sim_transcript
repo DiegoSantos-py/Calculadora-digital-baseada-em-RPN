@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ULA -c ULA --vector_source="D:/rep_ula/ULA - PBL 2/Waveform4.vwf" --testbench_file="D:/rep_ula/ULA - PBL 2/simulation/qsim/Waveform4.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ULA -c ULA --vector_source="D:/rep_ula/ULA - PBL 2/Waveform11.vwf" --testbench_file="D:/rep_ula/ULA - PBL 2/simulation/qsim/Waveform11.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,11 +26,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Oct 15 00:49:30 2025
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ULA -c ULA --vector_source="D:/rep_ula/ULA - PBL 2/Waveform4.vwf" --testbench_file="D:/rep_ula/ULA - PBL 2/simulation/qsim/Waveform4.vwf.vt"
+    Info: Processing started: Thu Oct 16 23:18:07 2025
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ULA -c ULA --vector_source="D:/rep_ula/ULA - PBL 2/Waveform11.vwf" --testbench_file="D:/rep_ula/ULA - PBL 2/simulation/qsim/Waveform11.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-
-ng output pin "unidade" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -57,14 +55,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Oct 15 00:49:32 2025
+    Info: Processing started: Thu Oct 16 23:18:09 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/rep_ula/ULA - PBL 2/simulation/qsim/" ULA -c ULA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file ULA.vo in folder "D:/rep_ula/ULA - PBL 2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Wed Oct 15 00:49:33 2025
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Oct 16 23:18:11 2025
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
@@ -81,74 +79,77 @@ D:/ModelSim/modelsim_ase/win32aloem/vsim -c -do ULA.do
 
 Reading pref.tcl
 
+
 # 2020.1
 
-
 # do ULA.do
+
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:35 on Oct 15,2025
+# Start time: 23:18:12 on Oct 16,2025
 # vlog -work work ULA.vo 
 
-# -- Compiling module display_decimal
-
+# -- Compiling module multiplicador_alternativo
 # -- Compiling module hard_block
 # 
 # Top level modules:
-# 	display_decimal
-# End time: 00:49:35 on Oct 15,2025, Elapsed time: 0:00:00
+# 	multiplicador_alternativo
+# End time: 23:18:13 on Oct 16,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 00:49:35 on Oct 15,2025
-# vlog -work work Waveform4.vwf.vt 
+# Start time: 23:18:13 on Oct 16,2025
+# vlog -work work Waveform11.vwf.vt 
 
-# -- Compiling module display_decimal_vlg_vec_tst
+# -- Compiling module multiplicador_alternativo_vlg_vec_tst
 # 
 # Top level modules:
-# 	display_decimal_vlg_vec_tst
-# End time: 00:49:36 on Oct 15,2025, Elapsed time: 0:00:01
+# 	multiplicador_alternativo_vlg_vec_tst
+# End time: 23:18:14 on Oct 16,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.display_decimal_vlg_vec_tst 
-# Start time: 00:49:36 on Oct 15,2025
-# Loading work.display_decimal_vlg_vec_tst
-# Loading work.display_decimal
+# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.multiplicador_alternativo_vlg_vec_tst 
+# Start time: 23:18:14 on Oct 16,2025
+# Loading work.multiplicador_alternativo_vlg_vec_tst
+# Loading work.multiplicador_alternativo
 # Loading work.hard_block
 # Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb
 # Loading fiftyfivenm_ver.fiftyfivenm_io_obuf
 # Loading fiftyfivenm_ver.fiftyfivenm_io_ibuf
+# Loading fiftyfivenm_ver.fiftyfivenm_clkctrl
+# Loading fiftyfivenm_ver.fiftyfivenm_mux41
+# Loading fiftyfivenm_ver.fiftyfivenm_ena_reg
+# Loading altera_ver.dffeas
 # Loading fiftyfivenm_ver.fiftyfivenm_unvm
 # Loading fiftyfivenm_ver.fiftyfivenm_adcblock
+# Loading altera_ver.PRIM_GDFF_LOW
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC1~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /display_decimal_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: ULA.vo Line: 2690
-# ** Warning: (vsim-3722) ULA.vo(2690): [TFMPC] - Missing connection for port 'clk_dft'.
+#    Time: 0 ps  Iteration: 0  Instance: /multiplicador_alternativo_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: ULA.vo Line: 2315
+# ** Warning: (vsim-3722) ULA.vo(2315): [TFMPC] - Missing connection for port 'clk_dft'.
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC2~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /display_decimal_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: ULA.vo Line: 2713
-# ** Warning: (vsim-3722) ULA.vo(2713): [TFMPC] - Missing connection for port 'clk_dft'.
-
+#    Time: 0 ps  Iteration: 0  Instance: /multiplicador_alternativo_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: ULA.vo Line: 2338
+# ** Warning: (vsim-3722) ULA.vo(2338): [TFMPC] - Missing connection for port 'clk_dft'.
 # after#26
-# ** Note: $stop    : Waveform4.vwf.vt(45)
-#    Time: 1 us  Iteration: 0  Instance: /display_decimal_vlg_vec_tst
-# Break in Module display_decimal_vlg_vec_tst at Waveform4.vwf.vt line 45
+# ** Note: $finish    : Waveform11.vwf.vt(53)
+#    Time: 1 us  Iteration: 0  Instance: /multiplicador_alternativo_vlg_vec_tst
 
-# Stopped at Waveform4.vwf.vt line 45
-
-# End time: 00:49:37 on Oct 15,2025, Elapsed time: 0:00:01
+# End time: 23:18:15 on Oct 16,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 4
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading D:/rep_ula/ULA - PBL 2/Waveform4.vwf...
+Reading D:/rep_ula/ULA - PBL 2/Waveform11.vwf...
 
 Reading D:/rep_ula/ULA - PBL 2/simulation/qsim/ULA.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/rep_ula/ULA - PBL 2/simulation/qsim/ULA_20251015004937.sim.vwf
+Warning: done - signal not found in VCD.
+
+Writing the resulting VWF to D:/rep_ula/ULA - PBL 2/simulation/qsim/ULA_20251016231815.sim.vwf
 
 Finished VCD to VWF conversion.
 

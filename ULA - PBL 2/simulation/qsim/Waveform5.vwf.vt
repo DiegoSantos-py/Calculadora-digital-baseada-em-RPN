@@ -19,118 +19,151 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/11/2025 18:59:42"
+// Generated on "10/15/2025 19:50:42"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          display_hexa
+// Verilog Test Bench (with test vectors) for design :                          universal_register
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module display_hexa_vlg_vec_tst();
+module universal_register_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg A0;
-reg A1;
-reg A2;
-reg A3;
-reg B0;
-reg B1;
-reg B2;
-reg B3;
+reg control;
+reg en;
+reg [16:0] in_paralelo;
+reg in_serie;
+reg reset;
 // wires                                               
-wire Da;
-wire Db;
-wire Dc;
-wire Dd;
-wire De;
-wire Df;
-wire Dg;
-wire Ua;
-wire Ub;
-wire Uc;
-wire Ud;
-wire Ue;
-wire Uf;
-wire Ug;
+wire [16:0] out;
 
 // assign statements (if any)                          
-display_hexa i1 (
+universal_register i1 (
 // port map - connection between master ports and signals/registers   
-	.A0(A0),
-	.A1(A1),
-	.A2(A2),
-	.A3(A3),
-	.B0(B0),
-	.B1(B1),
-	.B2(B2),
-	.B3(B3),
-	.Da(Da),
-	.Db(Db),
-	.Dc(Dc),
-	.Dd(Dd),
-	.De(De),
-	.Df(Df),
-	.Dg(Dg),
-	.Ua(Ua),
-	.Ub(Ub),
-	.Uc(Uc),
-	.Ud(Ud),
-	.Ue(Ue),
-	.Uf(Uf),
-	.Ug(Ug)
+	.control(control),
+	.en(en),
+	.in_paralelo(in_paralelo),
+	.in_serie(in_serie),
+	.out(out),
+	.reset(reset)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
 
-// A0
-initial
+// control
+always
 begin
-	A0 = 1'b1;
+	control = 1'b0;
+	control = #250000 1'b1;
+	#250000;
 end 
 
-// A1
+// en
+always
+begin
+	en = 1'b0;
+	en = #10000 1'b1;
+	#10000;
+end 
+// in_paralelo[ 16 ]
 initial
 begin
-	A1 = 1'b1;
+	in_paralelo[16] = 1'b0;
+end 
+// in_paralelo[ 15 ]
+initial
+begin
+	in_paralelo[15] = 1'b0;
+end 
+// in_paralelo[ 14 ]
+initial
+begin
+	in_paralelo[14] = 1'b0;
+end 
+// in_paralelo[ 13 ]
+initial
+begin
+	in_paralelo[13] = 1'b0;
+end 
+// in_paralelo[ 12 ]
+initial
+begin
+	in_paralelo[12] = 1'b0;
+end 
+// in_paralelo[ 11 ]
+initial
+begin
+	in_paralelo[11] = 1'b0;
+end 
+// in_paralelo[ 10 ]
+initial
+begin
+	in_paralelo[10] = 1'b0;
+end 
+// in_paralelo[ 9 ]
+initial
+begin
+	in_paralelo[9] = 1'b0;
+end 
+// in_paralelo[ 8 ]
+initial
+begin
+	in_paralelo[8] = 1'b0;
+end 
+// in_paralelo[ 7 ]
+initial
+begin
+	in_paralelo[7] = 1'b0;
+end 
+// in_paralelo[ 6 ]
+initial
+begin
+	in_paralelo[6] = 1'b0;
+end 
+// in_paralelo[ 5 ]
+initial
+begin
+	in_paralelo[5] = 1'b0;
+end 
+// in_paralelo[ 4 ]
+initial
+begin
+	in_paralelo[4] = 1'b0;
+end 
+// in_paralelo[ 3 ]
+initial
+begin
+	in_paralelo[3] = 1'b0;
+end 
+// in_paralelo[ 2 ]
+initial
+begin
+	in_paralelo[2] = 1'b0;
+end 
+// in_paralelo[ 1 ]
+initial
+begin
+	in_paralelo[1] = 1'b1;
+end 
+// in_paralelo[ 0 ]
+initial
+begin
+	in_paralelo[0] = 1'b0;
 end 
 
-// A2
+// in_serie
 initial
 begin
-	A2 = 1'b1;
+	in_serie = 1'b1;
 end 
 
-// A3
+// reset
 initial
 begin
-	A3 = 1'b1;
-end 
-
-// B0
-initial
-begin
-	B0 = 1'b0;
-end 
-
-// B1
-initial
-begin
-	B1 = 1'b0;
-end 
-
-// B2
-initial
-begin
-	B2 = 1'b0;
-end 
-
-// B3
-initial
-begin
-	B3 = 1'b0;
+	reset = 1'b0;
 end 
 endmodule
 

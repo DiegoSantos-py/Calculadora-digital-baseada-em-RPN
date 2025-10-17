@@ -63,7 +63,7 @@ module display_octal(
     input D0, D1, D2,
 	 input E0, E1, E2, 
     input F0, F1, F2,
-    output [6:0] d1, d2, d3, d4, d5, d6
+    output [6:0] d1, d2, d3, d4
 );
 
     d_octal unidade(
@@ -86,14 +86,4 @@ module display_octal(
         d4[0], d4[1], d4[2], d4[3], d4[4], d4[5], d4[6]
     );
 	
-		 
-	 d_octal unidade_milhar(
-        E0, E1, E2,
-        d5[0], d5[1], d5[2], d5[3], d5[4], d5[5], d5[6]
-    );
-
-    d_octal dezena_milhar	(
-        F0, F1, F2,
-        d6[0], d6[1], d6[2], d6[3], d6[4], d6[5], d6[6]
-    );
 endmodule
