@@ -10,14 +10,13 @@ module dividir_5(clk, clk_out);
     not Not1(nq1, q[1]);
 	 not Not2(nq2, q[2]);
 	 
-    // Flip-flops com lógica estrutural
     d_flipflop b0(.q(q[0]), .d(nq0), .reset(reset), .clk(clk));
     d_flipflop b1(.q(q[1]), .d(nq1), .reset(reset), .clk(nq0));
     d_flipflop b2(.q(q[2]), .d(nq2), .reset(reset), .clk(nq1));
 
-    // Lógica estrutural
+    
     and And0(reset, q[0], q[2]);
-    and And1(clk_out, q[2], 1'b1);  // substitui assign
+    and And1(clk_out, q[2], 1'b1);
 
 endmodule
 
@@ -29,7 +28,6 @@ module divisor_frequencia(
     wire [6:0] out;
     wire [5:0] q;
 
-    // Inversores para lógica estrutural (substitui "~")
     wire nq0, nq1, nq2, n_clk_out;
     not N0(nq0, q[0]);
     not N1(nq1, q[1]);
@@ -50,7 +48,7 @@ module divisor_frequencia(
     d_flipflop div9 (.q(q[2]), .d(nq2),       .reset(1'b0), .clk(nq1));
     d_flipflop div10(.q(clk_out), .d(n_clk_out), .reset(1'b0), .clk(nq2));
 
-    // Clocks auxiliares para debounce — usando lógica estrutural
+    // Clocks auxiliares para debounce 
     and And1(clk_aux, q[0], 1'b1);
     and And2(clk_botao, q[1], 1'b1);
 

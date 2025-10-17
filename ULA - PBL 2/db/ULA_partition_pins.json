@@ -64,6 +64,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "d3[1]",
+					"strict" : false
+				},
+				{
 					"name" : "d3[2]",
 					"strict" : false
 				},
@@ -84,6 +88,30 @@
 					"strict" : false
 				},
 				{
+					"name" : "d4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d4[5]",
+					"strict" : false
+				},
+				{
 					"name" : "d4[6]",
 					"strict" : false
 				},
@@ -92,7 +120,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "FlagErro",
+					"strict" : false
+				},
+				{
 					"name" : "FlagZero",
+					"strict" : false
+				},
+				{
+					"name" : "FlagOverflow",
+					"strict" : false
+				},
+				{
+					"name" : "overflow_result",
+					"strict" : false
+				},
+				{
+					"name" : "overflow_muitos_bits",
 					"strict" : false
 				},
 				{
@@ -112,7 +156,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[1]",
+					"name" : "A[0]",
 					"strict" : false
 				},
 				{
@@ -120,7 +164,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[0]",
+					"name" : "A[1]",
 					"strict" : false
 				},
 				{
@@ -128,7 +172,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "A[5]",
 					"strict" : false
 				},
 				{
@@ -136,15 +180,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[5]",
-					"strict" : false
-				},
-				{
-					"name" : "A[6]",
+					"name" : "A[3]",
 					"strict" : false
 				},
 				{
 					"name" : "A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "A[6]",
 					"strict" : false
 				},
 				{

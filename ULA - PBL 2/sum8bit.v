@@ -29,6 +29,7 @@ module sum8bit(Cout, S, A, B);
 	input [7:0]B;
 	output Cout;
 	output [7:0]S;
+	
 	wire [6:0]Co;
 
 	sum somador1(Co[0], S[0], A[0], B[0], 1'b0);

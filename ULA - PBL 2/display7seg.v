@@ -39,12 +39,12 @@ module display7seg(
     // -------------------------
     // Fios de seleção
     // -------------------------
-    wire sel_decimal, sel_hexa, sel_octal;
+wire sel_decimal, sel_hexa, sel_octal;
     wire not_sel0, not_sel1;
 
     not (not_sel0, sel[0]);
     not (not_sel1, sel[1]);
-
+	 
     and (sel_decimal, sel[1], sel[0]);  // 11
     and (sel_hexa, not_sel1, sel[0]);       // 01
     and (sel_octal, sel[1], not_sel0);      // 10
@@ -192,7 +192,7 @@ module display7seg(
 	or  (d4[5], d4_and_dec[5], d4_and_hex[5], d4_and_oct[5]);
 
 	and (d4_and_dec[6], dec_d4[6], sel_decimal);
-	and (d4_and_hex[6], hex_d4[6], sel_hexa);
+	and (d4_and_hex[6], 1'b1, sel_hexa);
 	and (d4_and_oct[6], oct_d4[6], sel_octal);
 	or  (d4[6], d4_and_dec[6], d4_and_hex[6], d4_and_oct[6]);
 endmodule

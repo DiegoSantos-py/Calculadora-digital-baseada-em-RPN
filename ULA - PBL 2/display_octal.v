@@ -1,6 +1,3 @@
-// d_octal.v
-// Módulo Verilog estrutural (sem uso de assign) que implementa as saídas a..g a partir de A,B,C
-// Expressões simplificadas conforme o enunciado
 
 module d_octal(
     input  A,

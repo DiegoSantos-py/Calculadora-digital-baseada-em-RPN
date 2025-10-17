@@ -12,7 +12,7 @@ module sub(S, A, B, bin, bout);
 	
 endmodule
 
-module sub8bit(bout, S, A, B, bin);
+module sub8bit_correto(bout, S, A, B, bin);
 	input [7:0]A;
 	input [7:0]B;
 	input bin;
@@ -34,7 +34,7 @@ module sub8bit(bout, S, A, B, bin);
 	
 	wire nbout;
 	not(nbout, bout);
-	// Para cada bit: Se A_less_than_B = 1, S[i] = 0, senão S[i] = S_internal[i]
+	
 	and and0(S[0], S_internal[0], nbout);
 	and and1(S[1], S_internal[1], nbout);
 	and and2(S[2], S_internal[2], nbout);
@@ -43,5 +43,28 @@ module sub8bit(bout, S, A, B, bin);
 	and and5(S[5], S_internal[5], nbout);
 	and and6(S[6], S_internal[6], nbout);
 	and and7(S[7], S_internal[7], nbout);
+	
+endmodule
+
+module sub8bit(bout, S, A, B, bin);
+	input [7:0]A;
+	input [7:0]B;
+	input bin;
+	output bout;
+	output [7:0]S;
+	
+	wire f1, f2, f3, f4, f5, f6, f7;
+	wire [7:0] S_internal;
+	
+	// Subtrator normal
+	sub sub1(S[0], A[0], B[0], bin, f1);
+	sub sub2(S[1], A[1], B[1], f1, f2);
+	sub sub3(S[2], A[2], B[2], f2, f3);
+	sub sub4(S[3], A[3], B[3], f3, f4);
+	sub sub5(S[4], A[4], B[4], f4, f5);
+	sub sub6(S[5], A[5], B[5], f5, f6);
+	sub sub7(S[6], A[6], B[6], f6, f7);
+	sub sub8(S[7], A[7], B[7], f7, bout);
+	
 	
 endmodule

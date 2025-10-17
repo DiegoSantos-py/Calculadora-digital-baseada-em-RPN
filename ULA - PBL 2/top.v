@@ -1,6 +1,6 @@
 module top(
-    input clk,          // clock interno da FPGA (ex.: 50 MHz)
-    input switch_in,    // switch físico para inserir valores
+    input clk,          
+    input switch_in,    
     input [7:0] data_in, // dados de entrada para o shift register
 	 output [7:0] out1, out2, out3,
     output execute);

@@ -64,7 +64,6 @@ module multiplicador_alternativo(
     // -------------------------------------
     // Saída
     // -------------------------------------
-    // Lógica estrutural sem assign:
     wire [15:0] out0, out1, out2, out3, out4, out5, out6, out7;
     and(out[0], acc[0], done);
     and(out[1], acc[1], done);
@@ -89,6 +88,6 @@ module multiplicador_alternativo(
     or(cont_enable, enable_acc, 1'b0);
 
     // done = 1 quando contador atingir B
-    not(done, ndone); // done = count_done
+    not(done, ndone); 
 endmodule
 

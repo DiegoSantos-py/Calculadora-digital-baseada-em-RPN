@@ -18,7 +18,7 @@ module switch_debouncer(
     wire botao_sync;
     d_flipflop sync1(
         .d(botao_raw),
-        .clk(clk_botao),   // clock bem mais lento (~32Hz)
+        .clk(clk_botao),   
         .reset(reset),
         .q(botao_sync)
     );

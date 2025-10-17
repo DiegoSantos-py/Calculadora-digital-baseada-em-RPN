@@ -60,7 +60,3 @@ module display_decimal(A, out);
 endmodule
 
 
-//    display_decimal({3'b00, Data}, {d4[6], d4[5], d4[4], d4[3], d4[2], d4[1], d4[0],
-//	 d3[6], d3[5], d3[4], d3[3], d3[2], d3[1], d3[0],
-//	 d2[6], d2[5], d2[4], d2[3], d2[2], d2[1], d2[0],
-//	 d1[6], d1[5], d1[4], d1[3], d1[2], d1[1], d1[0]});

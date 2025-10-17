@@ -396,8 +396,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :      
 VCCIO5                       : N16       : power  :                   : 2.5V    : 5         :                
 VCCIO6                       : N17       : power  :                   : 2.5V    : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N18       :        :                   :         : 6         :                
-d6[0]                        : N19       : output : 2.5 V             :         : 6         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : N20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N19       :        :                   :         : 6         :                
+d6[0]                        : N20       : output : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : N21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
