@@ -40,7 +40,7 @@ module divisor_frequencia(
     dividir_5 div3 (.clk(out[2]),  .clk_out(out[3]));
     dividir_5 div4 (.clk(out[3]),  .clk_out(out[4]));
     dividir_5 div5 (.clk(out[4]),  .clk_out(out[5]));
-	 dividir_5 div6 (.clk(out[4]),  .clk_out(out[6]));
+	 dividir_5 div6 (.clk(out[5]),  .clk_out(out[6]));
 	 
     // Flip-flops finais para gerar clocks auxiliares e principal
     d_flipflop div7 (.q(q[0]), .d(nq0),       .reset(1'b0), .clk(out[6]));

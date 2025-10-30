@@ -11,6 +11,7 @@ module multiplicador_alternativo(
     wire enable_acc, cont_enable;
     wire count_done;
 	 wire done;
+	 
     // -------------------------------------
     // Contador até 255
     // -------------------------------------
